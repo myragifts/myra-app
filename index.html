@@ -1120,3 +1120,346 @@ window.location.href =
 },2200);
 
 }
+/* ==========================================
+   OPEN SIGNUP
+========================================== */
+
+function openSignupModal(){
+
+document.getElementById(
+"signupName"
+).value =
+document.getElementById(
+"userName"
+).value.trim();
+
+document.getElementById(
+"signupPhone"
+).value =
+document.getElementById(
+"userPhone"
+).value.trim();
+
+document.getElementById(
+"signupModal"
+).classList.add(
+"show"
+);
+
+}
+
+/* ==========================================
+   CLOSE SIGNUP
+========================================== */
+
+function closeSignupModal(){
+
+document.getElementById(
+"signupModal"
+).classList.remove(
+"show"
+);
+
+}
+
+/* ==========================================
+   SIGNUP USER
+========================================== */
+
+function signupUser(){
+
+const name =
+document
+.getElementById(
+"signupName"
+)
+.value
+.trim();
+
+const phone =
+document
+.getElementById(
+"signupPhone"
+)
+.value
+.trim();
+
+const referralCode =
+document
+.getElementById(
+"signupReferral"
+)
+.value
+.trim();
+
+if(name.length < 2){
+
+showToast(
+"Please enter your full name"
+);
+
+return;
+
+}
+
+if(
+!validatePhone(phone)
+){
+
+showToast(
+"Please enter a valid phone number"
+);
+
+return;
+
+}
+
+saveUser(
+name,
+phone
+);
+
+if(referralCode){
+
+localStorage.setItem(
+STORAGE.REFERRED_BY,
+referralCode
+);
+
+}
+
+closeSignupModal();
+
+showToast(
+"✨ Welcome To MYRA"
+);
+
+document.getElementById(
+"welcomeMessage"
+).innerHTML = `
+
+Welcome,
+<strong>${name}</strong>
+
+<br><br>
+
+Your MYRA account is ready.
+
+<br><br>
+
+Discover thoughtfully curated gifts,
+handcrafted treasures,
+luxury aroma candles,
+elegant jewellery,
+original artwork,
+and timeless pieces made to be remembered.
+
+`;
+
+setTimeout(()=>{
+
+document
+.getElementById(
+"welcomeModal"
+)
+.classList.add(
+"show"
+);
+
+},1800);
+
+}
+
+/* ==========================================
+   GO TO HOME
+========================================== */
+
+function goToHome(){
+
+window.location.href =
+"home.html";
+
+}
+
+/* ==========================================
+   FORGOT SYSTEM
+========================================== */
+
+let forgotMode = "";
+
+function forgotName(){
+
+forgotMode = "name";
+
+document.getElementById(
+"forgotTitle"
+).innerText =
+"Forgot Name";
+
+document.getElementById(
+"forgotText"
+).innerText =
+"Enter your phone number";
+
+document.getElementById(
+"forgotIcon"
+).innerText =
+"📱";
+
+document.getElementById(
+"forgotInput"
+).placeholder =
+"Phone Number";
+
+document.getElementById(
+"forgotInput"
+).value =
+"";
+
+document.getElementById(
+"forgotFindBtn"
+).innerText =
+"Find Name";
+
+document.getElementById(
+"forgotModal"
+).classList.add(
+"show"
+);
+
+}
+
+function forgotPhone(){
+
+forgotMode = "phone";
+
+document.getElementById(
+"forgotTitle"
+).innerText =
+"Forgot Phone";
+
+document.getElementById(
+"forgotText"
+).innerText =
+"Enter your full name";
+
+document.getElementById(
+"forgotIcon"
+).innerText =
+"👤";
+
+document.getElementById(
+"forgotInput"
+).placeholder =
+"Your Full Name";
+
+document.getElementById(
+"forgotInput"
+).value =
+"";
+
+document.getElementById(
+"forgotFindBtn"
+).innerText =
+"Find Phone";
+
+document.getElementById(
+"forgotModal"
+).classList.add(
+"show"
+);
+
+}
+
+function closeForgotModal(){
+
+document
+.getElementById(
+"forgotModal"
+)
+.classList.remove(
+"show"
+);
+
+}
+
+function findForgotData(){
+
+const value =
+document
+.getElementById(
+"forgotInput"
+)
+.value
+.trim();
+
+if(!value){
+
+showToast(
+"Please fill the field"
+);
+
+return;
+
+}
+
+const savedName =
+localStorage.getItem(
+STORAGE.USER_NAME
+);
+
+const savedPhone =
+localStorage.getItem(
+STORAGE.USER_PHONE
+);
+
+if(
+forgotMode === "name"
+){
+
+if(
+savedPhone === value
+){
+
+showToast(
+"Name: " + savedName
+);
+
+}else{
+
+showToast(
+"No record found"
+);
+
+}
+
+}
+
+if(
+forgotMode === "phone"
+){
+
+if(
+savedName &&
+savedName.toLowerCase()
+===
+value.toLowerCase()
+){
+
+showToast(
+"Phone: " + savedPhone
+);
+
+}else{
+
+showToast(
+"No record found"
+);
+
+}
+
+}
+
+closeForgotModal();
+
+}

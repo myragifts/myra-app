@@ -425,3 +425,409 @@ color:var(--text);
 .input-box input::placeholder{
 color:#999999;
 }
+</head>
+
+<body class="loading">
+
+<!-- ==========================================
+     MAIN PAGE
+========================================== -->
+
+<main class="login-page">
+
+    <!-- ==========================================
+         LEFT HERO
+    ========================================== -->
+
+    <section class="hero-side">
+
+        <div class="hero-overlay">
+
+            <div class="hero-content">
+
+                <div class="hero-logo">
+                    MYRA
+                </div>
+
+                <div class="hero-tag">
+                    Where Every Gift Tells A Story
+                </div>
+
+                <div class="hero-desc">
+
+                    Discover thoughtfully curated gifts,
+                    handcrafted treasures,
+                    luxury aroma candles,
+                    elegant jewellery,
+                    original artwork,
+                    and timeless pieces made to be remembered.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         RIGHT LOGIN SIDE
+    ========================================== -->
+
+    <section class="login-side">
+
+        <div class="login-card">
+
+            <!-- Brand -->
+
+            <div class="brand-top">
+
+                <div class="brand-circle">
+                    <span>M</span>
+                </div>
+
+                <div class="brand-name">
+                    MYRA
+                </div>
+
+                <div class="brand-tagline">
+                    Where Every Gift Tells A Story
+                </div>
+
+                <div class="gold-divider"></div>
+
+            </div>
+
+            <!-- Welcome -->
+
+            <div class="welcome">
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+                <p>
+                    Sign in to discover premium gifts and timeless treasures
+                </p>
+
+            </div>
+
+            <!-- Login Form -->
+
+            <div class="input-box">
+
+                <div class="input-icon">
+                    👤
+                </div>
+
+                <input
+                    type="text"
+                    id="userName"
+                    placeholder="Enter Your Full Name">
+
+            </div>
+
+            <div class="input-box">
+
+                <div class="input-icon">
+                    📱
+                </div>
+
+                <input
+                    type="tel"
+                    id="userPhone"
+                    maxlength="10"
+                    placeholder="Enter Your Phone Number">
+
+            </div>
+
+            <button
+                class="signin-btn"
+                onclick="handleLogin()">
+
+                SIGN IN
+
+            </button>
+
+            <div class="divider">
+                OR
+            </div>
+
+            <button
+                class="signup-btn"
+                onclick="openSignupModal()">
+
+                New User ? Sign Up
+
+            </button>
+
+            <!-- Forgot Links -->
+
+            <div class="forgot-row">
+
+                <button onclick="forgotName()">
+                    Forgot Name?
+                </button>
+
+                <button onclick="forgotPhone()">
+                    Forgot Phone?
+                </button>
+
+            </div>
+
+            <!-- Referral Info -->
+
+            <div
+                style="
+                margin-top:22px;
+                padding:16px;
+                border-radius:18px;
+                background:#FFF8EA;
+                border:1px solid #EFD98C;
+                text-align:center;">
+
+                <div
+                    style="
+                    font-size:20px;
+                    font-weight:700;
+                    color:#2C1A0B;">
+
+                    🎁 Refer & Earn ₹25
+
+                </div>
+
+                <div
+                    style="
+                    margin-top:8px;
+                    color:#7D7468;
+                    font-size:16px;
+                    line-height:1.6;">
+
+                    Reward credited after your friend's
+                    first delivered order above ₹499.
+
+                </div>
+
+            </div>
+
+            <!-- Footer Text -->
+
+            <div class="secure-text">
+
+                Premium Gifts • Jewellery • Art • Aroma Candles
+
+                <br>
+
+                Handpicked With Love
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+ <!-- ==========================================
+     SIGNUP MODAL
+========================================== -->
+
+<div
+class="app-modal"
+id="signupModal">
+
+<div class="modal-box">
+
+<div class="modal-title">
+Create Account
+</div>
+
+<div class="modal-subtitle">
+
+Join MYRA and start discovering
+beautiful gifts curated just for you.
+
+</div>
+
+<div
+class="input-box"
+style="margin-top:22px;">
+
+<div class="input-icon">
+👤
+</div>
+
+<input
+type="text"
+id="signupName"
+placeholder="Your Full Name">
+
+</div>
+
+<div class="input-box">
+
+<div class="input-icon">
+📱
+</div>
+
+<input
+type="tel"
+id="signupPhone"
+maxlength="10"
+placeholder="Phone Number">
+
+</div>
+
+<div class="input-box">
+
+<div class="input-icon">
+🎁
+</div>
+
+<input
+type="text"
+id="signupReferral"
+maxlength="20"
+placeholder="Referral Code (Optional)">
+
+</div>
+
+<div class="modal-actions">
+
+<button
+class="modal-btn modal-back"
+onclick="closeSignupModal()">
+
+Back
+
+</button>
+
+<button
+class="modal-btn modal-confirm"
+onclick="signupUser()">
+
+Sign Up
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     FORGOT MODAL
+========================================== -->
+
+<div
+class="app-modal"
+id="forgotModal">
+
+<div class="modal-box">
+
+<div
+class="modal-title"
+id="forgotTitle">
+
+Forgot Name
+
+</div>
+
+<div
+class="modal-subtitle"
+id="forgotText">
+
+Enter your phone number
+
+</div>
+
+<div
+class="input-box"
+style="margin-top:22px;">
+
+<div
+class="input-icon"
+id="forgotIcon">
+
+📱
+
+</div>
+
+<input
+type="text"
+id="forgotInput"
+placeholder="Enter Details">
+
+</div>
+
+<div class="modal-actions">
+
+<button
+class="modal-btn modal-back"
+onclick="closeForgotModal()">
+
+Back
+
+</button>
+
+<button
+class="modal-btn modal-confirm"
+id="forgotFindBtn"
+onclick="findForgotData()">
+
+Find
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     WELCOME MODAL
+========================================== -->
+
+<div
+class="app-modal"
+id="welcomeModal">
+
+<div class="modal-box">
+
+<div class="welcome-brand">
+MYRA
+</div>
+
+<div class="welcome-story">
+Where Every Gift Tells A Story
+</div>
+
+<div
+class="welcome-message"
+id="welcomeMessage">
+
+Welcome to MYRA
+
+</div>
+
+<button
+class="begin-btn"
+onclick="goToHome()">
+
+Begin Your Journey
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     TOAST
+========================================== -->
+
+<div
+class="toast"
+id="toast">
+</div>  

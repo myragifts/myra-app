@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>
+MYRA | Where Every Gift Tells A Story
+</title>
+
+<meta
+name="theme-color"
+content="#2C1A0B">
+
+<meta
+name="apple-mobile-web-app-capable"
+content="yes">
+
+<meta
+name="mobile-web-app-capable"
+content="yes">
+
+<link
+rel="manifest"
+href="manifest.json">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<script src="config.js"></script>
+
+<style>
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent;
+}
+
+:root{
+
+--bg:#F8F5F0;
+--card:#FFFFFF;
+--text:#2C1A0B;
+
+--gold:#D4AF37;
+--gold-dark:#B68B1E;
+
+--border:#E8E0D3;
+
+--muted:#7D7468;
+
+--shadow:
+0 20px 60px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   BASE
+========================================== */
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:
+'Cormorant Garamond',
+serif;
+
+background:
+var(--bg);
+
+color:
+var(--text);
+
+min-height:
+100vh;
+
+overflow-x:
+hidden;
+
+}
+
+body.loading{
+visibility:hidden;
+}
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.login-page{
+
+min-height:100vh;
+
+display:grid;
+
+grid-template-columns:
+1.2fr 1fr;
+
+}
+
+/* ==========================================
+   HERO SIDE
+========================================== */
+
+.hero-side{
+
+position:relative;
+
+min-height:100vh;
+
+background:
+
+linear-gradient(
+rgba(20,16,12,.35),
+rgba(20,16,12,.55)
+),
+
+url(
+"https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=1600&auto=format&fit=crop"
+)
+
+center center/cover no-repeat;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+display:flex;
+
+align-items:flex-end;
+
+padding:60px;
+
+}
+
+.hero-content{
+
+max-width:520px;
+
+color:#FFFFFF;
+
+}
+
+.hero-logo{
+
+font-size:90px;
+
+font-weight:700;
+
+letter-spacing:8px;
+
+line-height:1;
+
+}
+
+.hero-tag{
+
+margin-top:12px;
+
+font-size:24px;
+
+font-weight:500;
+
+line-height:1.3;
+
+}
+
+.hero-desc{
+
+margin-top:20px;
+
+font-size:18px;
+
+line-height:1.7;
+
+opacity:.95;
+
+}
+
+/* ==========================================
+   LOGIN SIDE
+========================================== */
+
+.login-side{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:50px;
+
+background:
+
+linear-gradient(
+180deg,
+#FBF8F3,
+#F8F5F0
+);
+
+}
+
+.login-card{
+
+width:100%;
+
+max-width:520px;
+
+background:
+rgba(255,255,255,.94);
+
+backdrop-filter:
+blur(12px);
+
+border:
+1px solid rgba(212,175,55,.18);
+
+border-radius:
+34px;
+
+padding:
+42px 34px;
+
+box-shadow:
+var(--shadow);
+
+}
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.brand-top{
+text-align:center;
+}
+
+.brand-circle{
+
+width:92px;
+height:92px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:
+
+linear-gradient(
+135deg,
+#F2DE8B,
+#D4AF37
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+box-shadow:
+0 10px 30px rgba(212,175,55,.28);
+
+}
+
+.brand-circle span{
+
+font-size:42px;
+
+font-weight:700;
+
+color:#2C1A0B;
+
+}
+
+.brand-name{
+
+margin-top:18px;
+
+font-size:56px;
+
+font-weight:700;
+
+letter-spacing:6px;
+
+}
+
+.brand-tagline{
+
+margin-top:6px;
+
+font-size:18px;
+
+color:var(--muted);
+
+}
+
+.gold-divider{
+
+width:140px;
+
+height:1px;
+
+margin:24px auto;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+var(--gold),
+transparent
+);
+
+}
+/* ==========================================
+   WELCOME
+========================================== */
+
+.welcome{
+
+text-align:center;
+
+margin-bottom:28px;
+
+}
+
+.welcome h2{
+
+font-size:42px;
+
+font-weight:600;
+
+}
+
+.welcome p{
+
+margin-top:8px;
+
+font-size:18px;
+
+color:var(--muted);
+
+line-height:1.5;
+
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.input-box{
+
+height:62px;
+
+display:flex;
+
+align-items:center;
+
+border:1px solid var(--border);
+
+background:#FFFFFF;
+
+border-radius:18px;
+
+padding:0 18px;
+
+margin-bottom:16px;
+
+transition:.25s;
+
+}
+
+.input-box:focus-within{
+
+border-color:var(--gold);
+
+box-shadow:
+0 0 0 5px rgba(212,175,55,.10);
+
+}
+
+.input-icon{
+
+font-size:22px;
+
+margin-right:12px;
+
+}
+
+.input-box input{
+
+flex:1;
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+font-family:
+'Cormorant Garamond',
+serif;
+
+font-size:20px;
+
+color:var(--text);
+
+}
+
+.input-box input::placeholder{
+
+color:#999999;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.signin-btn{
+
+width:100%;
+
+height:62px;
+
+border:none;
+
+border-radius:18px;
+
+background:
+
+linear-gradient(
+135deg,
+#2C1A0B,
+#4A3218
+);
+
+color:#FFFFFF;
+
+font-family:
+'Cormorant Garamond',
+serif;
+
+font-size:22px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.signin-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.signin-btn:active{
+
+transform:scale(.98);
+
+}
+
+.signup-btn{
+
+width:100%;
+
+height:60px;
+
+border:1px solid var(--border);
+
+background:#FFFDF9;
+
+border-radius:18px;
+
+font-family:
+'Cormorant Garamond',
+serif;
+
+font-size:21px;
+
+font-weight:600;
+
+color:var(--text);
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.signup-btn:hover{
+
+border-color:var(--gold);
+
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+margin:22px 0;
+
+color:#9B948B;
+
+font-size:18px;
+
+}
+
+.divider::before,
+.divider::after{
+
+content:"";
+
+flex:1;
+
+height:1px;
+
+background:var(--border);
+
+}
+
+/* ==========================================
+   FORGOT LINKS
+========================================== */
+
+.forgot-row{
+
+display:flex;
+
+justify-content:center;
+
+gap:22px;
+
+margin-top:24px;
+
+}
+
+.forgot-row button{
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+font-family:
+'Cormorant Garamond',
+serif;
+
+font-size:18px;
+
+font-weight:600;
+
+color:var(--gold-dark);
+
+}
+
+/* ==========================================
+   SECURE TEXT
+========================================== */
+
+.secure-text{
+
+margin-top:28px;
+
+text-align:center;
+
+font-size:17px;
+
+line-height:1.8;
+
+color:var(--muted);
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.login-page{
+display:block;
+}
+
+.hero-side{
+min-height:300px;
+}
+
+.hero-overlay{
+padding:26px;
+}
+
+.hero-logo{
+font-size:56px;
+}
+
+.hero-tag{
+font-size:20px;
+}
+
+.hero-desc{
+display:none;
+}
+
+.login-side{
+
+padding:0 18px 24px;
+
+margin-top:-50px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.login-card{
+
+border-radius:34px;
+
+padding:26px 20px;
+
+}
+
+.brand-name{
+font-size:42px;
+}
+
+.welcome h2{
+font-size:32px;
+}
+
+.welcome p{
+font-size:17px;
+}
+
+}
+<!-- ==========================================
+     SIGNUP MODAL
+========================================== -->
+
+<div
+class="app-modal"
+id="signupModal">
+
+<div class="modal-box">
+
+<div class="modal-title">
+Create Account
+</div>
+
+<div class="modal-subtitle">
+
+Join MYRA and start discovering
+beautiful gifts curated just for you.
+
+</div>
+
+<div
+class="input-box"
+style="margin-top:22px;">
+
+<div class="input-icon">
+👤
+</div>
+
+<input
+type="text"
+id="signupName"
+placeholder="Your Full Name">
+
+</div>
+
+<div class="input-box">
+
+<div class="input-icon">
+📱
+</div>
+
+<input
+type="tel"
+id="signupPhone"
+maxlength="10"
+placeholder="Phone Number">
+
+</div>
+
+<div class="input-box">
+
+<div class="input-icon">
+🎁
+</div>
+
+<input
+type="text"
+id="signupReferral"
+maxlength="20"
+placeholder="Referral Code (Optional)">
+
+</div>
+
+<div class="modal-actions">
+
+<button
+class="modal-btn modal-back"
+onclick="closeSignupModal()">
+
+Back
+
+</button>
+
+<button
+class="modal-btn modal-confirm"
+onclick="signupUser()">
+
+Sign Up
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     FORGOT MODAL
+========================================== -->
+
+<div
+class="app-modal"
+id="forgotModal">
+
+<div class="modal-box">
+
+<div
+class="modal-title"
+id="forgotTitle">
+
+Forgot Name
+
+</div>
+
+<div
+class="modal-subtitle"
+id="forgotText">
+
+Enter your phone number
+
+</div>
+
+<div
+class="input-box"
+style="margin-top:22px;">
+
+<div
+class="input-icon"
+id="forgotIcon">
+
+📱
+
+</div>
+
+<input
+type="text"
+id="forgotInput"
+placeholder="Enter Details">
+
+</div>
+
+<div class="modal-actions">
+
+<button
+class="modal-btn modal-back"
+onclick="closeForgotModal()">
+
+Back
+
+</button>
+
+<button
+class="modal-btn modal-confirm"
+id="forgotFindBtn"
+onclick="findForgotData()">
+
+Find
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     WELCOME MODAL
+========================================== -->
+
+<div
+class="app-modal"
+id="welcomeModal">
+
+<div class="modal-box">
+
+<div class="welcome-brand">
+MYRA
+</div>
+
+<div class="welcome-story">
+Where Every Gift Tells A Story
+</div>
+
+<div
+class="welcome-message"
+id="welcomeMessage">
+
+Welcome to MYRA
+
+</div>
+
+<button
+class="begin-btn"
+onclick="goToHome()">
+
+Begin Your Journey
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     TOAST
+========================================== -->
+
+<div
+class="toast"
+id="toast">
+</div>  
+<script>
+
+/* ==========================================
+   STORAGE
+========================================== */
+
+const STORAGE = {
+
+LOGGED_IN:
+"myra_logged_in",
+
+USER_NAME:
+"myra_user_name",
+
+USER_PHONE:
+"myra_user_phone",
+
+USER_ID:
+"myra_user_id",
+
+REFERRAL_CODE:
+"myra_referral_code",
+
+REFERRED_BY:
+"myra_referred_by",
+
+REWARD_BALANCE:
+"myra_reward_balance",
+
+REWARD_HISTORY:
+"myra_reward_history"
+
+};
+
+/* ==========================================
+   AUTO LOGIN
+========================================== */
+
+if(
+localStorage.getItem(
+STORAGE.LOGGED_IN
+)==="true"
+){
+
+window.location.replace(
+"home.html"
+);
+
+}else{
+
+document.body.classList.remove(
+"loading"
+);
+
+}
+
+/* ==========================================
+   REFERRAL DETECTION
+========================================== */
+
+const urlParams =
+new URLSearchParams(
+window.location.search
+);
+
+const referralFromUrl =
+urlParams.get("ref");
+
+if(referralFromUrl){
+
+localStorage.setItem(
+STORAGE.REFERRED_BY,
+referralFromUrl
+);
+
+}
+
+/* ==========================================
+   AUTO PREFILL REFERRAL
+========================================== */
+
+window.addEventListener(
+"load",
+()=>{
+
+const referralInput =
+document.getElementById(
+"signupReferral"
+);
+
+if(!referralInput) return;
+
+const savedReferral =
+localStorage.getItem(
+STORAGE.REFERRED_BY
+);
+
+if(savedReferral){
+
+referralInput.value =
+savedReferral;
+
+}
+
+});
+
+/* ==========================================
+   TOAST
+========================================== */
+
+function showToast(message){
+
+const toast =
+document.getElementById(
+"toast"
+);
+
+toast.innerText =
+message;
+
+toast.classList.add(
+"show"
+);
+
+setTimeout(()=>{
+
+toast.classList.remove(
+"show"
+);
+
+},2200);
+
+}
+
+/* ==========================================
+   PHONE VALIDATION
+========================================== */
+
+function validatePhone(phone){
+
+return /^[6-9][0-9]{9}$/
+.test(phone);
+
+}
+
+/* ==========================================
+   USER ID
+========================================== */
+
+function generateUserId(phone){
+
+return "MYRA-" + phone;
+
+}
+
+/* ==========================================
+   REFERRAL CODE
+========================================== */
+
+function generateReferralCode(phone){
+
+return "MYRA" +
+phone.slice(-6);
+
+}
+
+/* ==========================================
+   SAVE USER
+========================================== */
+
+function saveUser(name,phone){
+
+localStorage.setItem(
+STORAGE.USER_NAME,
+name
+);
+
+localStorage.setItem(
+STORAGE.USER_PHONE,
+phone
+);
+
+localStorage.setItem(
+STORAGE.USER_ID,
+generateUserId(phone)
+);
+
+localStorage.setItem(
+STORAGE.LOGGED_IN,
+"true"
+);
+
+/* create own referral code */
+
+localStorage.setItem(
+STORAGE.REFERRAL_CODE,
+generateReferralCode(phone)
+);
+
+/* reward wallet */
+
+if(
+!localStorage.getItem(
+STORAGE.REWARD_BALANCE
+)
+){
+
+localStorage.setItem(
+STORAGE.REWARD_BALANCE,
+"0"
+);
+
+}
+
+if(
+!localStorage.getItem(
+STORAGE.REWARD_HISTORY
+)
+){
+
+localStorage.setItem(
+STORAGE.REWARD_HISTORY,
+"[]"
+);
+
+}
+
+}
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+function handleLogin(){
+
+const name =
+document
+.getElementById(
+"userName"
+)
+.value
+.trim();
+
+const phone =
+document
+.getElementById(
+"userPhone"
+)
+.value
+.trim();
+
+if(name.length < 2){
+
+showToast(
+"Please enter your full name"
+);
+
+return;
+
+}
+
+if(
+!validatePhone(phone)
+){
+
+showToast(
+"Please enter a valid phone number"
+);
+
+return;
+
+}
+
+saveUser(
+name,
+phone
+);
+
+showToast(
+"✨ Welcome Back To MYRA"
+);
+
+setTimeout(()=>{
+
+window.location.href =
+"home.html";
+
+},2200);
+
+}
+
+/* ==========================================
+   OPEN SIGNUP
+========================================== */
+
+function openSignupModal(){
+
+document.getElementById(
+"signupName"
+).value =
+document.getElementById(
+"userName"
+).value.trim();
+
+document.getElementById(
+"signupPhone"
+).value =
+document.getElementById(
+"userPhone"
+).value.trim();
+
+document.getElementById(
+"signupModal"
+).classList.add(
+"show"
+);
+
+}
+
+/* ==========================================
+   CLOSE SIGNUP
+========================================== */
+
+function closeSignupModal(){
+
+document.getElementById(
+"signupModal"
+).classList.remove(
+"show"
+);
+
+}  
+/* ==========================================
+   SIGNUP USER
+========================================== */
+
+function signupUser(){
+
+const name =
+document
+.getElementById(
+"signupName"
+)
+.value
+.trim();
+
+const phone =
+document
+.getElementById(
+"signupPhone"
+)
+.value
+.trim();
+
+const referralCode =
+document
+.getElementById(
+"signupReferral"
+)
+.value
+.trim();
+
+if(name.length < 2){
+
+showToast(
+"Please enter your full name"
+);
+
+return;
+
+}
+
+if(
+!validatePhone(phone)
+){
+
+showToast(
+"Please enter a valid phone number"
+);
+
+return;
+
+}
+
+/* save user */
+
+saveUser(
+name,
+phone
+);
+
+/* save referred by */
+
+if(referralCode){
+
+localStorage.setItem(
+STORAGE.REFERRED_BY,
+referralCode
+);
+
+}
+
+/* close signup */
+
+closeSignupModal();
+
+/* welcome */
+
+showToast(
+"✨ Welcome To MYRA"
+);
+
+document.getElementById(
+"welcomeMessage"
+).innerHTML = `
+
+Welcome,
+<strong>${name}</strong>
+
+<br><br>
+
+Your MYRA account is ready.
+
+<br><br>
+
+Discover thoughtfully curated gifts,
+handcrafted treasures,
+luxury aroma candles,
+elegant jewellery,
+original artwork,
+and timeless pieces made to be remembered.
+
+`;
+
+setTimeout(()=>{
+
+document
+.getElementById(
+"welcomeModal"
+)
+.classList.add(
+"show"
+);
+
+},1800);
+
+}
+
+/* ==========================================
+   GO TO HOME
+========================================== */
+
+function goToHome(){
+
+window.location.href =
+"home.html";
+
+}
+
+/* ==========================================
+   FORGOT NAME
+========================================== */
+
+let forgotMode = "";
+
+function forgotName(){
+
+forgotMode = "name";
+
+document.getElementById(
+"forgotTitle"
+).innerText =
+"Forgot Name";
+
+document.getElementById(
+"forgotText"
+).innerText =
+"Enter your phone number";
+
+document.getElementById(
+"forgotIcon"
+).innerText =
+"📱";
+
+document.getElementById(
+"forgotInput"
+).placeholder =
+"Phone Number";
+
+document.getElementById(
+"forgotInput"
+).value =
+"";
+
+document.getElementById(
+"forgotFindBtn"
+).innerText =
+"Find Name";
+
+document.getElementById(
+"forgotModal"
+).classList.add(
+"show"
+);
+
+}
+
+/* ==========================================
+   FORGOT PHONE
+========================================== */
+
+function forgotPhone(){
+
+forgotMode = "phone";
+
+document.getElementById(
+"forgotTitle"
+).innerText =
+"Forgot Phone";
+
+document.getElementById(
+"forgotText"
+).innerText =
+"Enter your full name";
+
+document.getElementById(
+"forgotIcon"
+).innerText =
+"👤";
+
+document.getElementById(
+"forgotInput"
+).placeholder =
+"Your Full Name";
+
+document.getElementById(
+"forgotInput"
+).value =
+"";
+
+document.getElementById(
+"forgotFindBtn"
+).innerText =
+"Find Phone";
+
+document.getElementById(
+"forgotModal"
+).classList.add(
+"show"
+);
+
+}
+
+/* ==========================================
+   CLOSE FORGOT
+========================================== */
+
+function closeForgotModal(){
+
+document
+.getElementById(
+"forgotModal"
+)
+.classList.remove(
+"show"
+);
+
+}
+
+/* ==========================================
+   FIND DATA
+========================================== */
+
+function findForgotData(){
+
+const value =
+document
+.getElementById(
+"forgotInput"
+)
+.value
+.trim();
+
+if(!value){
+
+showToast(
+"Please fill the field"
+);
+
+return;
+
+}
+
+const savedName =
+localStorage.getItem(
+STORAGE.USER_NAME
+);
+
+const savedPhone =
+localStorage.getItem(
+STORAGE.USER_PHONE
+);
+
+if(
+forgotMode === "name"
+){
+
+if(
+savedPhone === value
+){
+
+showToast(
+"Name: " + savedName
+);
+
+}else{
+
+showToast(
+"No record found"
+);
+
+}
+
+}
+
+if(
+forgotMode === "phone"
+){
+
+if(
+savedName &&
+savedName.toLowerCase()
+===
+value.toLowerCase()
+){
+
+showToast(
+"Phone: " + savedPhone
+);
+
+}else{
+
+showToast(
+"No record found"
+);
+
+}
+
+}
+
+closeForgotModal();
+
+}
+
+/* ==========================================
+   PHONE FILTERS
+========================================== */
+
+document
+.getElementById(
+"userPhone"
+)
+.addEventListener(
+"input",
+function(){
+
+this.value =
+this.value
+.replace(/\D/g,"")
+.slice(0,10);
+
+}
+);
+
+document
+.getElementById(
+"signupPhone"
+)
+.addEventListener(
+"input",
+function(){
+
+this.value =
+this.value
+.replace(/\D/g,"")
+.slice(0,10);
+
+}
+);
+/* ==========================================
+   ENTER KEY SUPPORT
+========================================== */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+if(
+e.key === "Enter"
+){
+
+const signupOpen =
+document
+.getElementById(
+"signupModal"
+)
+.classList.contains(
+"show"
+);
+
+if(signupOpen){
+
+signupUser();
+
+}else{
+
+handleLogin();
+
+}
+
+}
+
+}
+);
+
+/* ==========================================
+   CLOSE MODAL WHEN CLICK OUTSIDE
+========================================== */
+
+window.addEventListener(
+"click",
+function(e){
+
+const signupModal =
+document.getElementById(
+"signupModal"
+);
+
+const forgotModal =
+document.getElementById(
+"forgotModal"
+);
+
+const welcomeModal =
+document.getElementById(
+"welcomeModal"
+);
+
+if(
+e.target === signupModal
+){
+
+closeSignupModal();
+
+}
+
+if(
+e.target === forgotModal
+){
+
+closeForgotModal();
+
+}
+
+if(
+e.target === welcomeModal
+){
+
+welcomeModal.classList.remove(
+"show"
+);
+
+}
+
+}
+);
+
+/* ==========================================
+   MOBILE APP MODE
+========================================== */
+
+function isStandalone(){
+
+return window.matchMedia(
+"(display-mode: standalone)"
+).matches
+||
+window.navigator.standalone;
+
+}
+
+/* ==========================================
+   PREVENT BACK AFTER LOGIN
+========================================== */
+
+if(
+localStorage.getItem(
+STORAGE.LOGGED_IN
+)==="true"
+){
+
+history.pushState(
+null,
+null,
+location.href
+);
+
+window.addEventListener(
+"popstate",
+function(){
+
+history.pushState(
+null,
+null,
+location.href
+);
+
+}
+);
+
+}
+
+/* ==========================================
+   CREATE DEVICE ID
+========================================== */
+
+if(
+!localStorage.getItem(
+"myra_device_id"
+)
+){
+
+const deviceId =
+
+"MYRA-DEVICE-" +
+
+Math.random()
+.toString(36)
+.substring(2,10)
+.toUpperCase();
+
+localStorage.setItem(
+"myra_device_id",
+deviceId
+);
+
+}
+
+/* ==========================================
+   REFERRAL REWARD WALLET
+========================================== */
+
+if(
+!localStorage.getItem(
+STORAGE.REWARD_BALANCE
+)
+){
+
+localStorage.setItem(
+STORAGE.REWARD_BALANCE,
+"0"
+);
+
+}
+
+if(
+!localStorage.getItem(
+STORAGE.REWARD_HISTORY
+)
+){
+
+localStorage.setItem(
+STORAGE.REWARD_HISTORY,
+"[]"
+);
+
+}
+
+/* ==========================================
+   WELCOME MESSAGE
+========================================== */
+
+console.log(
+"MYRA Loaded Successfully"
+);
+
+console.log(
+"Where Every Gift Tells A Story"
+);
+
+</script>
+
+</body>
+</html>  

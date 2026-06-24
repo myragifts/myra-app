@@ -1463,3 +1463,245 @@ showToast(
 closeForgotModal();
 
 }
+/* ==========================================
+   PHONE FILTERS
+========================================== */
+
+document
+.getElementById(
+"userPhone"
+)
+.addEventListener(
+"input",
+function(){
+
+this.value =
+this.value
+.replace(/\D/g,"")
+.slice(0,10);
+
+}
+);
+
+document
+.getElementById(
+"signupPhone"
+)
+.addEventListener(
+"input",
+function(){
+
+this.value =
+this.value
+.replace(/\D/g,"")
+.slice(0,10);
+
+}
+);
+
+/* ==========================================
+   ENTER KEY SUPPORT
+========================================== */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+if(
+e.key === "Enter"
+){
+
+const signupOpen =
+document
+.getElementById(
+"signupModal"
+)
+.classList.contains(
+"show"
+);
+
+if(signupOpen){
+
+signupUser();
+
+}else{
+
+handleLogin();
+
+}
+
+}
+
+}
+);
+
+/* ==========================================
+   CLOSE MODALS OUTSIDE CLICK
+========================================== */
+
+window.addEventListener(
+"click",
+function(e){
+
+const signupModal =
+document.getElementById(
+"signupModal"
+);
+
+const forgotModal =
+document.getElementById(
+"forgotModal"
+);
+
+const welcomeModal =
+document.getElementById(
+"welcomeModal"
+);
+
+if(
+e.target === signupModal
+){
+
+closeSignupModal();
+
+}
+
+if(
+e.target === forgotModal
+){
+
+closeForgotModal();
+
+}
+
+if(
+e.target === welcomeModal
+){
+
+welcomeModal.classList.remove(
+"show"
+);
+
+}
+
+}
+);
+
+/* ==========================================
+   MOBILE APP MODE
+========================================== */
+
+function isStandalone(){
+
+return window.matchMedia(
+"(display-mode: standalone)"
+).matches
+||
+window.navigator.standalone;
+
+}
+
+/* ==========================================
+   BACK BUTTON PROTECTION
+========================================== */
+
+if(
+localStorage.getItem(
+STORAGE.LOGGED_IN
+)==="true"
+){
+
+history.pushState(
+null,
+null,
+location.href
+);
+
+window.addEventListener(
+"popstate",
+function(){
+
+history.pushState(
+null,
+null,
+location.href
+);
+
+}
+);
+
+}
+
+/* ==========================================
+   DEVICE ID
+========================================== */
+
+if(
+!localStorage.getItem(
+"myra_device_id"
+)
+){
+
+const deviceId =
+
+"MYRA-DEVICE-" +
+
+Math.random()
+.toString(36)
+.substring(2,10)
+.toUpperCase();
+
+localStorage.setItem(
+"myra_device_id",
+deviceId
+);
+
+}
+
+/* ==========================================
+   REWARD WALLET
+========================================== */
+
+if(
+!localStorage.getItem(
+STORAGE.REWARD_BALANCE
+)
+){
+
+localStorage.setItem(
+STORAGE.REWARD_BALANCE,
+"0"
+);
+
+}
+
+if(
+!localStorage.getItem(
+STORAGE.REWARD_HISTORY
+)
+){
+
+localStorage.setItem(
+STORAGE.REWARD_HISTORY,
+"[]"
+);
+
+}
+
+/* ==========================================
+   MYRA STARTUP
+========================================== */
+
+console.log(
+"MYRA Loaded Successfully"
+);
+
+console.log(
+"Where Every Gift Tells A Story"
+);
+
+</script>
+
+</body>
+
+</html>

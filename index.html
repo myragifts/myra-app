@@ -831,3 +831,292 @@ Begin Your Journey
 class="toast"
 id="toast">
 </div>  
+<script>
+
+/* ==========================================
+   STORAGE
+========================================== */
+
+const STORAGE = {
+
+LOGGED_IN:
+"myra_logged_in",
+
+USER_NAME:
+"myra_user_name",
+
+USER_PHONE:
+"myra_user_phone",
+
+USER_ID:
+"myra_user_id",
+
+REFERRAL_CODE:
+"myra_referral_code",
+
+REFERRED_BY:
+"myra_referred_by",
+
+REWARD_BALANCE:
+"myra_reward_balance",
+
+REWARD_HISTORY:
+"myra_reward_history",
+
+DEVICE_ID:
+"myra_device_id"
+
+};
+
+/* ==========================================
+   AUTO LOGIN
+========================================== */
+
+if(
+localStorage.getItem(
+STORAGE.LOGGED_IN
+)==="true"
+){
+
+window.location.replace(
+"home.html"
+);
+
+}else{
+
+document.body.classList.remove(
+"loading"
+);
+
+}
+
+/* ==========================================
+   REFERRAL LINK DETECTION
+========================================== */
+
+const urlParams =
+new URLSearchParams(
+window.location.search
+);
+
+const referralFromUrl =
+urlParams.get("ref");
+
+if(referralFromUrl){
+
+localStorage.setItem(
+STORAGE.REFERRED_BY,
+referralFromUrl
+);
+
+}
+
+/* ==========================================
+   AUTO PREFILL REFERRAL
+========================================== */
+
+window.addEventListener(
+"load",
+()=>{
+
+const referralInput =
+document.getElementById(
+"signupReferral"
+);
+
+if(!referralInput) return;
+
+const savedReferral =
+localStorage.getItem(
+STORAGE.REFERRED_BY
+);
+
+if(savedReferral){
+
+referralInput.value =
+savedReferral;
+
+}
+
+});
+
+/* ==========================================
+   TOAST
+========================================== */
+
+function showToast(message){
+
+const toast =
+document.getElementById(
+"toast"
+);
+
+toast.innerText =
+message;
+
+toast.classList.add(
+"show"
+);
+
+setTimeout(()=>{
+
+toast.classList.remove(
+"show"
+);
+
+},2200);
+
+}
+
+/* ==========================================
+   PHONE VALIDATION
+========================================== */
+
+function validatePhone(phone){
+
+return /^[6-9][0-9]{9}$/
+.test(phone);
+
+}
+
+/* ==========================================
+   USER ID
+========================================== */
+
+function generateUserId(phone){
+
+return "MYRA-" + phone;
+
+}
+
+/* ==========================================
+   REFERRAL CODE
+========================================== */
+
+function generateReferralCode(phone){
+
+return "MYRA" +
+phone.slice(-6);
+
+}
+
+/* ==========================================
+   SAVE USER
+========================================== */
+
+function saveUser(name,phone){
+
+localStorage.setItem(
+STORAGE.USER_NAME,
+name
+);
+
+localStorage.setItem(
+STORAGE.USER_PHONE,
+phone
+);
+
+localStorage.setItem(
+STORAGE.USER_ID,
+generateUserId(phone)
+);
+
+localStorage.setItem(
+STORAGE.LOGGED_IN,
+"true"
+);
+
+localStorage.setItem(
+STORAGE.REFERRAL_CODE,
+generateReferralCode(phone)
+);
+
+if(
+!localStorage.getItem(
+STORAGE.REWARD_BALANCE
+)
+){
+
+localStorage.setItem(
+STORAGE.REWARD_BALANCE,
+"0"
+);
+
+}
+
+if(
+!localStorage.getItem(
+STORAGE.REWARD_HISTORY
+)
+){
+
+localStorage.setItem(
+STORAGE.REWARD_HISTORY,
+"[]"
+);
+
+}
+
+}
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+function handleLogin(){
+
+const name =
+document
+.getElementById(
+"userName"
+)
+.value
+.trim();
+
+const phone =
+document
+.getElementById(
+"userPhone"
+)
+.value
+.trim();
+
+if(name.length < 2){
+
+showToast(
+"Please enter your full name"
+);
+
+return;
+
+}
+
+if(
+!validatePhone(phone)
+){
+
+showToast(
+"Please enter a valid phone number"
+);
+
+return;
+
+}
+
+saveUser(
+name,
+phone
+);
+
+showToast(
+"✨ Welcome Back To MYRA"
+);
+
+setTimeout(()=>{
+
+window.location.href =
+"home.html";
+
+},2200);
+
+}

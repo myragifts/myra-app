@@ -1,1 +1,328 @@
+/* ==========================================================================
+   MYRA
+   A Shopping Love Story
+   common.css
+   Part 1 — Design Tokens & Foundation
+   ========================================================================== */
 
+
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
+
+:root{
+
+/* ==========================================================================
+   BRAND
+   ========================================================================== */
+
+--brand-primary:#C8A96A;
+--brand-primary-light:#D8BD87;
+--brand-primary-dark:#B8924E;
+
+--brand-cream:#F9F7F2;
+--brand-warm:#FFFDF9;
+--brand-white:#FFFFFF;
+
+--brand-sage:#A8B8A0;
+--brand-sage-light:#DCE6D8;
+
+--brand-text:#2F2F2F;
+--brand-text-light:#666666;
+--brand-muted:#8D8D8D;
+
+--brand-border:#ECE8DF;
+
+--brand-success:#8FAF91;
+
+/* Soft warning */
+--brand-warning:#D8C3A5;
+
+/* Soft danger */
+--brand-danger:#D7A8A8;
+
+--brand-overlay:rgba(0,0,0,.45);
+
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+--font-family:
+"Inter",
+"Segoe UI",
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+
+--font-xs:12px;
+--font-sm:14px;
+--font-md:16px;
+--font-lg:18px;
+--font-xl:22px;
+--font-2xl:28px;
+--font-3xl:36px;
+
+--weight-light:300;
+--weight-normal:400;
+--weight-medium:500;
+--weight-semibold:600;
+--weight-bold:700;
+
+--line-tight:1.2;
+--line-normal:1.5;
+--line-relaxed:1.8;
+
+--letter-tight:-0.02em;
+--letter-normal:0;
+--letter-wide:.04em;
+
+
+/* ==========================================================================
+   SPACING
+   ========================================================================== */
+
+--space-2xs:2px;
+--space-xs:4px;
+--space-sm:8px;
+--space-md:12px;
+--space-lg:16px;
+--space-xl:24px;
+--space-2xl:32px;
+--space-3xl:48px;
+--space-4xl:64px;
+
+
+/* ==========================================================================
+   BORDER RADIUS
+   ========================================================================== */
+
+--radius-sm:8px;
+--radius-md:12px;
+--radius-lg:18px;
+--radius-xl:24px;
+--radius-pill:999px;
+--radius-circle:50%;
+
+
+/* ==========================================================================
+   BORDER WIDTH
+   ========================================================================== */
+
+--border-thin:1px;
+--border-normal:2px;
+--border-thick:3px;
+
+
+/* ==========================================================================
+   SHADOWS
+   ========================================================================== */
+
+--shadow-xs:
+0 1px 3px rgba(0,0,0,.04);
+
+--shadow-sm:
+0 3px 8px rgba(0,0,0,.05);
+
+--shadow-md:
+0 8px 20px rgba(0,0,0,.07);
+
+--shadow-lg:
+0 16px 34px rgba(0,0,0,.08);
+
+--shadow-xl:
+0 24px 48px rgba(0,0,0,.10);
+
+
+/* ==========================================================================
+   BLUR
+   ========================================================================== */
+
+--blur-sm:4px;
+--blur-md:10px;
+--blur-lg:18px;
+
+
+/* ==========================================================================
+   OPACITY
+   ========================================================================== */
+
+--opacity-disabled:.45;
+--opacity-hover:.92;
+--opacity-overlay:.65;
+
+
+/* ==========================================================================
+   TRANSITIONS
+   ========================================================================== */
+
+--speed-fast:.18s;
+--speed-normal:.30s;
+--speed-slow:.55s;
+
+--ease-standard:ease;
+--ease-smooth:cubic-bezier(.4,0,.2,1);
+
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+--container-width:1320px;
+
+--navbar-height:68px;
+--bottom-nav-height:74px;
+--footer-height:72px;
+
+--section-gap:64px;
+
+
+/* ==========================================================================
+   ICONS
+   ========================================================================== */
+
+--icon-xs:14px;
+--icon-sm:18px;
+--icon-md:22px;
+--icon-lg:28px;
+--icon-xl:36px;
+
+
+/* ==========================================================================
+   COMPONENT HEIGHTS
+   ========================================================================== */
+
+--button-height:48px;
+--input-height:48px;
+
+
+/* ==========================================================================
+   Z INDEX
+   ========================================================================== */
+
+--z-base:1;
+--z-sticky:100;
+--z-dropdown:300;
+--z-modal:800;
+--z-toast:900;
+--z-loader:9999;
+
+}
+
+
+
+/* ==========================================================================
+   CSS RESET
+   ========================================================================== */
+
+*,
+*::before,
+*::after{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+-webkit-text-size-adjust:100%;
+
+}
+
+body{
+
+font-family:var(--font-family);
+
+font-size:var(--font-md);
+
+font-weight:var(--weight-normal);
+
+line-height:var(--line-normal);
+
+letter-spacing:var(--letter-normal);
+
+background:var(--brand-warm);
+
+color:var(--brand-text);
+
+text-rendering:optimizeLegibility;
+
+-webkit-font-smoothing:antialiased;
+
+-moz-osx-font-smoothing:grayscale;
+
+overflow-x:hidden;
+
+min-height:100vh;
+
+}
+
+
+/* ==========================================================================
+   GLOBAL ELEMENTS
+   ========================================================================== */
+
+img{
+
+display:block;
+
+max-width:100%;
+
+height:auto;
+
+user-select:none;
+
+-webkit-user-drag:none;
+
+}
+
+button{
+
+font:inherit;
+
+border:none;
+
+outline:none;
+
+background:none;
+
+cursor:pointer;
+
+transition:all var(--speed-normal) var(--ease-smooth);
+
+}
+
+input,
+textarea,
+select{
+
+font:inherit;
+
+outline:none;
+
+border:none;
+
+background:none;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+transition:color var(--speed-normal) var(--ease-smooth);
+
+}
+
+ul,
+ol{
+
+list-style:none;
+
+}

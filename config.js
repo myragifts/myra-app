@@ -12,7 +12,7 @@ const MYRA_CONFIG = {
 
   APP_NAME: "MYRA",
 
-  TAGLINE: "Where Every Gift Tells A Story",
+  TAGLINE: "A Shopping Love Story",
 
   VERSION: "1.0.0",
 
@@ -98,7 +98,7 @@ const MYRA_CONFIG = {
 
     DEFAULT_TITLE:
 
-      "MYRA - Where Every Gift Tells A Story",
+      "MYRA - A Shopping Love Story",
 
     DEFAULT_DESCRIPTION:
 

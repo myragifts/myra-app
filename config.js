@@ -159,3 +159,264 @@ const MYRA_CONFIG = {
   PROFILE_PAGE: "profile.html",
 
   ADMIN_PAGE: "admin.html",
+  /* =========================================================
+     SHIPPING
+  ========================================================= */
+
+  SHIPPING: {
+
+    FREE_SHIPPING_THRESHOLD: 499,
+
+    SHIPPING_CHARGE: 40,
+
+    DELIVERY_DAYS_MIN: 3,
+
+    DELIVERY_DAYS_MAX: 7,
+
+    FREE_SHIPPING_MESSAGE:
+
+      "Congratulations! You get Free Shipping",
+
+    ADD_MORE_MESSAGE:
+
+      "Add more items above ₹499 to get Free Shipping"
+
+  },
+
+
+
+  /* =========================================================
+     PAYMENT
+  ========================================================= */
+
+  PAYMENT: {
+
+    ACTIVE_METHOD: "WHATSAPP_UPI",
+
+    AVAILABLE_METHODS: {
+
+      WHATSAPP_UPI: true,
+
+      RAZORPAY: true
+
+    },
+
+    WHATSAPP_ORDER: {
+
+      ENABLED: true,
+
+      NUMBER: "919836697502"
+
+    },
+
+    UPI: {
+
+      ENABLED: true,
+
+      PAYMENT_LINK:
+
+        "https://tinyurl.com/myra-pay-secure"
+
+    },
+
+    RAZORPAY: {
+
+      ENABLED: false,
+
+      KEY_ID: "",
+
+      COMPANY_NAME: "MYRA"
+
+    }
+
+  },
+
+
+
+  /* =========================================================
+     REFERRAL PROGRAM
+  ========================================================= */
+
+  REFERRAL: {
+
+    ENABLED: true,
+
+    REWARD_AMOUNT: 25,
+
+    MINIMUM_ORDER: 499,
+
+    REWARD_AFTER: "DELIVERED"
+
+  },
+
+
+
+  /* =========================================================
+     PRODUCT RULES
+  ========================================================= */
+
+  PRODUCT: {
+
+    ID_PREFIX: "MY",
+
+    ID_FORMAT: "MY00001",
+
+    AUTO_GENERATE_ID: true,
+
+    NEVER_REUSE_ID: true,
+
+    IMAGE_LIMIT: 6,
+
+    NAME_WORD_LIMIT: 8
+
+  },
+
+
+
+  /* =========================================================
+     IMAGE RULES
+  ========================================================= */
+
+  IMAGE: {
+
+    MAX_IMAGES_PER_PRODUCT: 6,
+
+    ALLOWED_FORMATS: [
+
+      "jpg",
+
+      "jpeg",
+
+      "png",
+
+      "webp"
+
+    ],
+
+    MAX_FILE_SIZE_MB: 5
+
+  },
+
+
+
+  /* =========================================================
+     SEARCH
+  ========================================================= */
+
+  SEARCH: {
+
+    MIN_CHARACTERS: 2,
+
+    MAX_RESULTS: 20
+
+  },
+
+
+
+  /* =========================================================
+     PAGINATION
+  ========================================================= */
+
+  PAGINATION: {
+
+    PRODUCTS_PER_PAGE: 12
+
+  },
+
+
+
+  /* =========================================================
+     PRODUCT CATEGORIES
+  ========================================================= */
+
+  CATEGORIES: [
+
+    {
+
+      name: "Aroma Candles",
+
+      subcategories: [
+
+        "Jar Candles",
+
+        "Tin Candles",
+
+        "Soy Wax Candles",
+
+        "Scented Candles",
+
+        "Gift Candles",
+
+        "Luxury Candles"
+
+      ]
+
+    },
+
+    {
+
+      name: "Handmade Jewellery",
+
+      subcategories: [
+
+        "Earrings",
+
+        "Necklaces",
+
+        "Bracelets",
+
+        "Rings",
+
+        "Jewellery Sets",
+
+        "Gift Jewellery"
+
+      ]
+
+    },
+
+    {
+
+      name: "Real Paintings",
+
+      subcategories: [
+
+        "Abstract Art",
+
+        "Landscape Paintings",
+
+        "Modern Art",
+
+        "Floral Paintings",
+
+        "Portrait Paintings",
+
+        "Mini Paintings"
+
+      ]
+
+    },
+
+    {
+
+      name: "Trending Gifts",
+
+      subcategories: [
+
+        "Birthday Gifts",
+
+        "Anniversary Gifts",
+
+        "Wedding Gifts",
+
+        "Couple Gifts",
+
+        "Home Decor Gifts",
+
+        "Corporate Gifts"
+
+      ]
+
+    }
+
+  ],

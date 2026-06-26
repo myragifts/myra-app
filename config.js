@@ -420,3 +420,236 @@ const MYRA_CONFIG = {
     }
 
   ],
+  /* =========================================================
+     COUPON SYSTEM
+  ========================================================= */
+
+  COUPONS: {
+
+    ENABLED: true,
+
+    WELCOME: {
+
+      CODE: "WELCOME",
+
+      TYPE: "PERCENT",
+
+      VALUE: 10,
+
+      MIN_ORDER: 499
+
+    }
+
+  },
+
+
+
+  /* =========================================================
+     ORDER STATUS
+  ========================================================= */
+
+  ORDER_STATUS: [
+
+    "Payment Pending",
+
+    "Order Placed",
+
+    "Confirmed",
+
+    "Packed",
+
+    "Shipped",
+
+    "Out For Delivery",
+
+    "Delivered",
+
+    "Cancelled"
+
+  ],
+
+
+
+  /* =========================================================
+     PAYMENT STATUS
+  ========================================================= */
+
+  PAYMENT_STATUS: {
+
+    WHATSAPP_UPI: [
+
+      "Payment Pending",
+
+      "Payment Received"
+
+    ],
+
+    RAZORPAY: [
+
+      "Payment Successful",
+
+      "Payment Failed",
+
+      "Refunded"
+
+    ]
+
+  },
+
+
+
+  /* =========================================================
+     CUSTOMER LABELS
+  ========================================================= */
+
+  CUSTOMER_LABELS: [
+
+    "New Customer",
+
+    "Returning Customer",
+
+    "VIP Customer",
+
+    "High Buyer",
+
+    "Referral Customer"
+
+  ],
+
+
+
+  /* =========================================================
+     STORAGE KEYS
+  ========================================================= */
+
+  STORAGE_KEYS: {
+
+    USER_ID: "myra_user_id",
+
+    USER_NAME: "myra_user_name",
+
+    USER_PHONE: "myra_user_phone",
+
+    USER_DATA: "myra_user_data",
+
+    DEVICE_ID: "myra_device_id",
+
+    CART: "myra_cart",
+
+    FAVOURITES: "myra_favourites",
+
+    CART_COUNT: "myra_cart_count",
+
+    REFERRAL_CODE: "myra_referral_code",
+
+    REFERRED_BY: "myra_referred_by",
+
+    REWARD_BALANCE: "myra_reward_balance",
+
+    REWARD_HISTORY: "myra_reward_history",
+
+    USER_LOGIN: "myra_logged_in",
+
+    WELCOME_SHOWN: "myra_welcome_shown",
+
+    APP_INSTALLED: "myra_app_installed",
+
+    INSTALL_LATER: "myra_install_later"
+
+  },
+
+
+
+  /* =========================================================
+     NOTIFICATIONS
+  ========================================================= */
+
+  NOTIFICATIONS: {
+
+    ENABLED: true,
+
+    ORDER: true,
+
+    REWARD: true,
+
+    REFERRAL: true,
+
+    PROMOTIONAL: false
+
+  },
+
+
+
+  /* =========================================================
+     MESSAGES
+  ========================================================= */
+
+  MESSAGES: {
+
+    LOGIN_REQUIRED:
+
+      "Please sign in first",
+
+    NAME_REQUIRED:
+
+      "Please enter your name",
+
+    PHONE_REQUIRED:
+
+      "Please enter your phone number",
+
+    INVALID_PHONE:
+
+      "Please enter a valid phone number",
+
+    LOGIN_SUCCESS:
+
+      "Welcome to MYRA",
+
+    LOGOUT_SUCCESS:
+
+      "Logged out successfully",
+
+    CART_ADDED:
+
+      "Added to cart",
+
+    PROFILE_UPDATED:
+
+      "Profile updated successfully",
+
+    ORDER_SUCCESS:
+
+      "Order placed successfully",
+
+    REFERRAL_APPLIED:
+
+      "Referral code applied successfully",
+
+    REFERRAL_PENDING:
+
+      "Reward will be credited after delivery",
+
+    REFERRAL_SUCCESS:
+
+      "Referral reward credited successfully",
+
+    REWARD_APPLIED:
+
+      "MYRA Rewards applied successfully",
+
+    REWARD_LIMIT_REACHED:
+
+      "Maximum reward balance reached"
+
+  }
+
+};
+
+
+
+/* =========================================================
+   GLOBAL ACCESS
+========================================================= */
+
+window.CONFIG = MYRA_CONFIG;

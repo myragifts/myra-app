@@ -1,0 +1,280 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 10.product-card.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 10
+    PRODUCT CARD
+
+    PART 1
+    Card Structure + Image + Badge
+==============================================================================*/
+
+/* PRODUCT GRID */
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:var(--space-lg);
+
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+
+    position:relative;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-xl);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+    cursor:pointer;
+
+    transition:all var(--normal) var(--ease);
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* PRODUCT IMAGE AREA */
+
+.product-card-image-wrap{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:1 / 1.18;
+
+    background:var(--surface-soft);
+
+    overflow:hidden;
+
+}
+
+.product-card-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform var(--slow) var(--ease);
+
+}
+
+.product-card:hover .product-card-image{
+
+    transform:scale(1.04);
+
+}
+
+/* IMAGE PLACEHOLDER */
+
+.product-card-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--surface-soft);
+
+    color:var(--text-muted);
+
+    font-size:var(--font-sm);
+
+}
+
+/* BADGE */
+
+.product-card-badge{
+
+    position:absolute;
+
+    top:.75rem;
+
+    left:.75rem;
+
+    z-index:2;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:28px;
+
+    padding:0 .75rem;
+
+    border-radius:var(--radius-pill);
+
+    background:rgba(255,255,255,.88);
+
+    color:var(--brand-dark);
+
+    font-size:var(--font-xs);
+
+    font-weight:var(--weight-semibold);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* BADGE TYPES */
+
+.product-card-badge.best-seller{
+
+    color:#8A6A2F;
+
+}
+
+.product-card-badge.trending{
+
+    color:#A87344;
+
+}
+
+.product-card-badge.popular{
+
+    color:#7E8F6E;
+
+}
+
+.product-card-badge.new-arrival{
+
+    color:#9C7B4D;
+
+}
+
+.product-card-badge.premium-pick{
+
+    color:#7D6A91;
+
+}
+
+/* FAVOURITE BUTTON */
+
+.product-card-fav{
+
+    position:absolute;
+
+    top:.75rem;
+
+    right:.75rem;
+
+    z-index:2;
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.9);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--text-soft);
+
+    box-shadow:var(--shadow-sm);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    transition:all var(--normal) var(--ease);
+
+}
+
+.product-card-fav:hover,
+
+.product-card-fav.active{
+
+    color:var(--brand-dark);
+
+    background:var(--surface);
+
+}
+
+/* STOCK OVERLAY */
+
+.product-card-stock-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(252,251,248,.72);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:opacity var(--normal) var(--ease);
+
+}
+
+.product-card.out-of-stock .product-card-stock-overlay{
+
+    opacity:1;
+
+}
+
+.product-card-stock-pill{
+
+    padding:.55rem 1rem;
+
+    border-radius:var(--radius-pill);
+
+    background:var(--warning-bg);
+
+    color:#9B7654;
+
+    font-size:var(--font-sm);
+
+    font-weight:var(--weight-semibold);
+
+    box-shadow:var(--shadow-sm);
+
+}

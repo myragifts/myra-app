@@ -1,0 +1,188 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 20.responsive.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 20
+    RESPONSIVE
+==============================================================================*/
+
+/* WIDE DESKTOP */
+
+@media (min-width:1440px){
+
+    .container{
+        max-width:88rem;
+    }
+
+    .section{
+        padding-block:5rem;
+    }
+
+}
+
+/* DESKTOP */
+
+@media (max-width:1280px){
+
+    .container{
+        padding-inline:1.25rem;
+    }
+
+}
+
+/* LAPTOP / TABLET */
+
+@media (max-width:1024px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.55rem;
+    }
+
+    .section{
+        padding-block:3rem;
+    }
+
+    .grid-4{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .desktop-only{
+        display:none !important;
+    }
+
+}
+
+/* TABLET */
+
+@media (max-width:768px){
+
+    .container{
+        padding-inline:1rem;
+    }
+
+    .section{
+        padding-block:2.5rem;
+    }
+
+    .grid-3,
+    .grid-4{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .tablet-hidden{
+        display:none !important;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width:560px){
+
+    h1{
+        font-size:1.75rem;
+    }
+
+    h2{
+        font-size:1.35rem;
+    }
+
+    h3{
+        font-size:1.15rem;
+    }
+
+    .container{
+        padding-inline:.9rem;
+    }
+
+    .section{
+        padding-block:2rem;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4{
+        grid-template-columns:repeat(2,1fr);
+        gap:.75rem;
+    }
+
+    .mobile-hidden{
+        display:none !important;
+    }
+
+    .mobile-only{
+        display:block !important;
+    }
+
+    .mobile-safe-bottom{
+        padding-bottom:calc(var(--bottom-nav-height) + 1rem);
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width:380px){
+
+    .container{
+        padding-inline:.75rem;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4{
+        gap:.6rem;
+    }
+
+}
+
+/* DEFAULT VISIBILITY HELPERS */
+
+.mobile-only{
+    display:none;
+}
+
+.desktop-only{
+    display:block;
+}
+
+/* GLOBAL RESPONSIVE GRID */
+
+.grid-responsive{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:var(--space-lg);
+}
+
+@media (max-width:1024px){
+
+    .grid-responsive{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media (max-width:768px){
+
+    .grid-responsive{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:480px){
+
+    .grid-responsive{
+        grid-template-columns:repeat(2,1fr);
+        gap:var(--space-md);
+    }
+
+}

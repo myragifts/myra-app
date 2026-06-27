@@ -783,3 +783,226 @@
     color:var(--text-muted);
     font-size:var(--font-xs);
 }
+/*==============================================================================
+    PART 5
+    Reward Wallet Modal + Responsive + Final Polish
+==============================================================================*/
+
+/* REWARD HOW IT WORKS MODAL */
+
+.reward-how-modal .modal{
+    max-width:520px;
+}
+
+.reward-how-content{
+    text-align:left;
+}
+
+.reward-how-title{
+    color:var(--text);
+    font-size:var(--font-xl);
+    font-weight:var(--weight-bold);
+    margin-bottom:.5rem;
+    text-align:center;
+}
+
+.reward-how-subtitle{
+    color:var(--text-soft);
+    font-size:var(--font-sm);
+    line-height:1.6;
+    text-align:center;
+    margin-bottom:1.25rem;
+}
+
+.reward-how-steps{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.reward-how-step{
+    display:flex;
+    gap:.9rem;
+    padding:1rem;
+    background:var(--surface-soft);
+    border:1px solid var(--border-light);
+    border-radius:var(--radius-lg);
+}
+
+.reward-how-number{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--brand);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    font-size:var(--font-sm);
+    font-weight:var(--weight-bold);
+}
+
+.reward-how-step-title{
+    color:var(--text);
+    font-size:var(--font-sm);
+    font-weight:var(--weight-bold);
+    margin-bottom:.25rem;
+}
+
+.reward-how-step-text{
+    color:var(--text-soft);
+    font-size:var(--font-sm);
+    line-height:1.6;
+    margin:0;
+}
+
+.reward-how-note{
+    margin-top:1.25rem;
+    padding:1rem;
+    background:#FFF9F2;
+    border:1px solid #F2E3C6;
+    border-radius:var(--radius-lg);
+    color:#8A6A2F;
+    font-size:var(--font-sm);
+    line-height:1.6;
+}
+
+/* EMPTY STATES */
+
+.profile-empty{
+    padding:1.25rem;
+    text-align:center;
+    background:var(--surface-soft);
+    border:1px dashed var(--border);
+    border-radius:var(--radius-lg);
+}
+
+.profile-empty-title{
+    color:var(--text);
+    font-size:var(--font-sm);
+    font-weight:var(--weight-semibold);
+    margin-bottom:.35rem;
+}
+
+.profile-empty-text{
+    color:var(--text-muted);
+    font-size:var(--font-sm);
+    line-height:1.6;
+    margin:0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+    .profile-grid{
+        grid-template-columns:1fr;
+    }
+
+    .profile-quick-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+@media (max-width:560px){
+
+    .profile-wrap{
+        padding:.9rem;
+    }
+
+    .profile-brand{
+        align-items:flex-start;
+    }
+
+    .profile-user-card{
+        align-items:center;
+        gap:1rem;
+        min-height:auto;
+    }
+
+    .profile-avatar{
+        width:84px;
+        height:84px;
+        font-size:2.2rem;
+    }
+
+    .profile-user-name{
+        font-size:var(--font-lg);
+    }
+
+    .profile-quick-grid{
+        grid-template-columns:repeat(4,1fr);
+        gap:.7rem;
+    }
+
+    .profile-quick-icon{
+        width:58px;
+        height:58px;
+        font-size:1.35rem;
+    }
+
+    .profile-card{
+        padding:1rem;
+        border-radius:var(--radius-lg);
+    }
+
+    .reward-balance{
+        align-items:center;
+    }
+
+    .reward-icon{
+        width:58px;
+        height:58px;
+        font-size:1.55rem;
+    }
+
+    .reward-balance-value{
+        font-size:1.75rem;
+    }
+
+    .reward-referral-row{
+        gap:.65rem;
+    }
+
+    .reward-copy-btn{
+        min-width:72px;
+    }
+
+    .profile-address-card,
+    .profile-notification-item{
+        padding:.9rem;
+    }
+
+    .checkout-product-img{
+        width:64px;
+    }
+
+}
+
+@media (max-width:380px){
+
+    .profile-quick-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .profile-quick-item{
+        flex-direction:row;
+        justify-content:flex-start;
+        text-align:left;
+        padding:.75rem;
+        border:1px solid var(--border);
+        border-radius:var(--radius-lg);
+        background:var(--surface);
+    }
+
+    .profile-quick-icon{
+        width:42px;
+        height:42px;
+        font-size:1.1rem;
+        box-shadow:none;
+        background:var(--surface-soft);
+    }
+
+}

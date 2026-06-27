@@ -1,1 +1,125 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
 
+    File    : css/01.tokens.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 1
+    FOUNDATION DESIGN TOKENS
+==============================================================================*/
+
+:root{
+
+/* BRAND */
+--brand:#C8A56A;
+--brand-light:#D9BD87;
+--brand-dark:#AE8744;
+
+/* BACKGROUND */
+--bg:#FCFBF8;
+--surface:#FFFFFF;
+--surface-soft:#F8F5EF;
+--surface-alt:#F4F0E8;
+
+/* TEXT */
+--text:#2F2F2F;
+--text-soft:#606060;
+--text-muted:#8D8D8D;
+--text-disabled:#BBBBBB;
+--text-white:#FFFFFF;
+
+/* BORDER */
+--border:#E8E2D8;
+--border-light:#F2EEE8;
+
+/* STATE COLORS */
+--success:#8FAF8D;
+--success-bg:#EEF6EE;
+
+--warning:#D8C3A2;
+--warning-bg:#FBF5EB;
+
+--danger:#D9B1B1;
+--danger-bg:#FBF2F2;
+
+--info:#A9BCC9;
+--info-bg:#F3F8FB;
+
+/* TYPOGRAPHY */
+--font-family:"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+
+--font-xs:0.75rem;
+--font-sm:0.875rem;
+--font-md:1rem;
+--font-lg:1.125rem;
+--font-xl:1.375rem;
+--font-2xl:1.75rem;
+--font-3xl:2.25rem;
+
+--weight-light:300;
+--weight-normal:400;
+--weight-medium:500;
+--weight-semibold:600;
+--weight-bold:700;
+
+--line-tight:1.2;
+--line-normal:1.5;
+--line-relaxed:1.8;
+
+/* SPACING */
+--space-xs:0.25rem;
+--space-sm:0.5rem;
+--space-md:0.75rem;
+--space-lg:1rem;
+--space-xl:1.5rem;
+--space-2xl:2rem;
+--space-3xl:3rem;
+--space-4xl:4rem;
+
+/* RADIUS */
+--radius-sm:0.5rem;
+--radius-md:0.75rem;
+--radius-lg:1rem;
+--radius-xl:1.5rem;
+--radius-pill:999rem;
+
+/* SHADOW */
+--shadow-sm:0 3px 8px rgba(0,0,0,.05);
+--shadow-md:0 8px 18px rgba(0,0,0,.08);
+--shadow-lg:0 18px 36px rgba(0,0,0,.10);
+
+/* LAYOUT */
+--container:82.5rem;
+--navbar-height:4.25rem;
+--bottom-nav-height:4.75rem;
+--button-height:3rem;
+--input-height:3rem;
+--section-gap:4rem;
+
+/* MOTION */
+--fast:.18s;
+--normal:.30s;
+--slow:.55s;
+--ease:cubic-bezier(.4,0,.2,1);
+
+/* Z INDEX */
+--z-base:1;
+--z-header:100;
+--z-dropdown:300;
+--z-modal:800;
+--z-toast:900;
+--z-loader:9999;
+
+/* ACCESSIBILITY */
+--focus-ring:0 0 0 3px rgba(200,165,106,.22);
+--selection-bg:#F3E6CA;
+--selection-text:#2F2F2F;
+
+/* SCROLLBAR */
+--scrollbar-track:#F6F2EA;
+--scrollbar-thumb:#D7C19B;
+--scrollbar-thumb-hover:#C7A86F;
+
+}

@@ -1,0 +1,245 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 05.header.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 5
+    HEADER
+==============================================================================*/
+
+/* HEADER */
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:var(--navbar-height);
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:var(--z-header);
+
+}
+
+/* HEADER CONTAINER */
+
+.header-container{
+
+    width:100%;
+
+    max-width:var(--container);
+
+    height:100%;
+
+    margin:auto;
+
+    padding-inline:var(--space-lg);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* LEFT */
+
+.header-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-md);
+
+}
+
+/* CENTER */
+
+.header-center{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+/* RIGHT */
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-sm);
+
+}
+
+/* LOGO */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.6rem;
+
+    text-decoration:none;
+
+}
+
+.logo-image{
+
+    width:40px;
+
+    height:40px;
+
+    object-fit:contain;
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-title{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    color:var(--brand-dark);
+
+    line-height:1;
+
+}
+
+.logo-tagline{
+
+    font-size:.68rem;
+
+    color:var(--text-muted);
+
+    margin-top:2px;
+
+}
+
+/* ICON BUTTON */
+
+.header-icon{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    transition:all var(--normal) var(--ease);
+
+}
+
+.header-icon:hover{
+
+    background:var(--surface-soft);
+
+}
+
+/* BADGE */
+
+.header-badge{
+
+    position:absolute;
+
+    top:4px;
+
+    right:4px;
+
+    min-width:18px;
+
+    height:18px;
+
+    padding-inline:5px;
+
+    border-radius:999px;
+
+    background:var(--brand);
+
+    color:#fff;
+
+    font-size:.68rem;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* SEARCH */
+
+.header-search{
+
+    width:100%;
+
+    max-width:520px;
+
+}
+
+/* BACK BUTTON */
+
+.back-button{
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    transition:all var(--normal) var(--ease);
+
+}
+
+.back-button:hover{
+
+    background:var(--surface-soft);
+
+}

@@ -1,0 +1,233 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 07.buttons.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 7
+    BUTTONS
+==============================================================================*/
+
+/* BASE BUTTON */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.5rem;
+
+    min-width:120px;
+
+    height:var(--button-height);
+
+    padding:0 1.5rem;
+
+    border:none;
+
+    border-radius:var(--radius-pill);
+
+    cursor:pointer;
+
+    user-select:none;
+
+    white-space:nowrap;
+
+    font-size:var(--font-md);
+
+    font-weight:var(--weight-semibold);
+
+    transition:all var(--normal) var(--ease);
+
+}
+
+/* PRIMARY */
+
+.btn-primary{
+
+    background:var(--brand);
+
+    color:#fff;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--brand-dark);
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* SECONDARY */
+
+.btn-secondary{
+
+    background:var(--surface);
+
+    color:var(--brand-dark);
+
+    border:1px solid var(--border);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--surface-soft);
+
+}
+
+/* SUCCESS */
+
+.btn-success{
+
+    background:var(--success);
+
+    color:#fff;
+
+}
+
+/* OUTLINE */
+
+.btn-outline{
+
+    background:transparent;
+
+    color:var(--brand-dark);
+
+    border:1px solid var(--brand);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--surface-soft);
+
+}
+
+/* FULL WIDTH */
+
+.btn-block{
+
+    width:100%;
+
+}
+
+/* SMALL */
+
+.btn-sm{
+
+    height:42px;
+
+    padding:0 1rem;
+
+    font-size:var(--font-sm);
+
+}
+
+/* LARGE */
+
+.btn-lg{
+
+    height:56px;
+
+    padding:0 2rem;
+
+    font-size:var(--font-lg);
+
+}
+
+/* DISABLED */
+
+.btn:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+/* MYRA SPECIAL BUTTONS */
+
+.btn-add-cart{
+
+    background:var(--brand);
+
+    color:#fff;
+
+}
+
+.btn-check-stock{
+
+    background:var(--surface);
+
+    color:var(--brand-dark);
+
+    border:1px solid var(--brand);
+
+}
+
+.btn-pay{
+
+    background:var(--brand-dark);
+
+    color:#fff;
+
+}
+
+.btn-notify{
+
+    background:var(--brand);
+
+    color:#fff;
+
+}
+
+.btn-availability-requested{
+
+    background:var(--success-bg);
+
+    color:var(--success);
+
+    border:1px solid var(--success);
+
+    cursor:default;
+
+}
+
+/* ICON */
+
+.btn-icon{
+
+    width:18px;
+
+    height:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* LOADING */
+
+.btn-loading{
+
+    pointer-events:none;
+
+    opacity:.8;
+
+}

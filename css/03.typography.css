@@ -1,0 +1,288 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : css/03.typography.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 3
+    TYPOGRAPHY
+==============================================================================*/
+
+/* HEADINGS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color:var(--text);
+
+    font-weight:var(--weight-bold);
+
+    line-height:var(--line-tight);
+
+    margin-bottom:var(--space-md);
+
+}
+
+/* H1 */
+
+h1{
+
+    font-size:var(--font-3xl);
+
+}
+
+/* H2 */
+
+h2{
+
+    font-size:var(--font-2xl);
+
+}
+
+/* H3 */
+
+h3{
+
+    font-size:var(--font-xl);
+
+}
+
+/* H4 */
+
+h4{
+
+    font-size:var(--font-lg);
+
+}
+
+/* H5 */
+
+h5{
+
+    font-size:var(--font-md);
+
+}
+
+/* H6 */
+
+h6{
+
+    font-size:var(--font-sm);
+
+}
+
+/* PARAGRAPH */
+
+p{
+
+    color:var(--text-soft);
+
+    font-size:var(--font-md);
+
+    line-height:var(--line-relaxed);
+
+    margin-bottom:var(--space-md);
+
+}
+
+/* SMALL */
+
+small{
+
+    font-size:var(--font-sm);
+
+    color:var(--text-muted);
+
+}
+
+/* STRONG */
+
+strong{
+
+    font-weight:var(--weight-bold);
+
+}
+
+/* LABEL */
+
+label{
+
+    display:block;
+
+    font-size:var(--font-sm);
+
+    font-weight:var(--weight-medium);
+
+    color:var(--text);
+
+    margin-bottom:var(--space-xs);
+
+}
+
+/* CAPTION */
+
+.caption{
+
+    font-size:var(--font-xs);
+
+    color:var(--text-muted);
+
+}
+
+/* PRICE */
+
+.price{
+
+    font-size:var(--font-xl);
+
+    font-weight:var(--weight-bold);
+
+    color:var(--brand-dark);
+
+}
+
+.price-old{
+
+    color:var(--text-muted);
+
+    text-decoration:line-through;
+
+}
+
+.price-save{
+
+    color:var(--success);
+
+    font-weight:var(--weight-semibold);
+
+}
+
+/* PRODUCT */
+
+.product-title{
+
+    font-size:var(--font-lg);
+
+    font-weight:var(--weight-semibold);
+
+    color:var(--text);
+
+}
+
+.product-description{
+
+    font-size:var(--font-sm);
+
+    color:var(--text-soft);
+
+    line-height:var(--line-relaxed);
+
+}
+
+/* LINKS */
+
+.text-link{
+
+    color:var(--brand-dark);
+
+    font-weight:var(--weight-medium);
+
+    transition:color var(--normal) var(--ease);
+
+}
+
+.text-link:hover{
+
+    color:var(--brand);
+
+}
+
+/* TEXT ALIGN */
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+/* TEXT COLORS */
+
+.text-primary{
+
+    color:var(--brand);
+
+}
+
+.text-success{
+
+    color:var(--success);
+
+}
+
+.text-warning{
+
+    color:var(--warning);
+
+}
+
+.text-danger{
+
+    color:var(--danger);
+
+}
+
+.text-muted{
+
+    color:var(--text-muted);
+
+}
+
+/* TEXT WEIGHT */
+
+.fw-light{
+
+    font-weight:var(--weight-light);
+
+}
+
+.fw-normal{
+
+    font-weight:var(--weight-normal);
+
+}
+
+.fw-medium{
+
+    font-weight:var(--weight-medium);
+
+}
+
+.fw-semibold{
+
+    font-weight:var(--weight-semibold);
+
+}
+
+.fw-bold{
+
+    font-weight:var(--weight-bold);
+
+}

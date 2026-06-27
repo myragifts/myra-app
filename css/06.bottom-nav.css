@@ -1,0 +1,183 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 06.bottom-nav.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 6
+    BOTTOM NAVIGATION
+==============================================================================*/
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+
+    position:fixed;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:var(--bottom-nav-height);
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border-top:1px solid var(--border);
+
+    z-index:var(--z-header);
+
+}
+
+/* CONTAINER */
+
+.bottom-nav-container{
+
+    width:100%;
+
+    max-width:var(--container);
+
+    height:100%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-around;
+
+}
+
+/* ITEM */
+
+.bottom-nav-item{
+
+    flex:1;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:4px;
+
+    color:var(--text-muted);
+
+    transition:all var(--normal) var(--ease);
+
+    position:relative;
+
+}
+
+/* ACTIVE */
+
+.bottom-nav-item.active{
+
+    color:var(--brand-dark);
+
+}
+
+/* ICON */
+
+.bottom-nav-icon{
+
+    width:24px;
+
+    height:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* LABEL */
+
+.bottom-nav-label{
+
+    font-size:.72rem;
+
+    font-weight:500;
+
+}
+
+/* ACTIVE INDICATOR */
+
+.bottom-nav-item.active::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:34px;
+
+    height:3px;
+
+    background:var(--brand);
+
+    border-radius:999px;
+
+}
+
+/* BADGE */
+
+.bottom-nav-badge{
+
+    position:absolute;
+
+    top:10px;
+
+    right:28%;
+
+    min-width:18px;
+
+    height:18px;
+
+    padding-inline:5px;
+
+    border-radius:999px;
+
+    background:var(--brand);
+
+    color:#fff;
+
+    font-size:.68rem;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* SAFE AREA */
+
+.bottom-safe-space{
+
+    height:calc(var(--bottom-nav-height) + env(safe-area-inset-bottom));
+
+}

@@ -1,0 +1,168 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 12.badges.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 12
+    BADGES
+==============================================================================*/
+
+/* BASE BADGE */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.35rem;
+
+    min-height:28px;
+
+    padding:0 .8rem;
+
+    border-radius:999px;
+
+    font-size:var(--font-xs);
+
+    font-weight:var(--weight-semibold);
+
+    white-space:nowrap;
+
+    user-select:none;
+
+}
+
+/* BEST SELLER */
+
+.badge-best-seller{
+
+    background:#F7E7BF;
+
+    color:#8A6422;
+
+}
+
+/* TRENDING */
+
+.badge-trending{
+
+    background:#FFE9D8;
+
+    color:#C46B24;
+
+}
+
+/* POPULAR */
+
+.badge-popular{
+
+    background:#EEF6EE;
+
+    color:#5F8460;
+
+}
+
+/* NEW ARRIVAL */
+
+.badge-new{
+
+    background:#F6EFE2;
+
+    color:#9C7445;
+
+}
+
+/* PREMIUM PICK */
+
+.badge-premium{
+
+    background:#F5F2E8;
+
+    color:#7A6545;
+
+}
+
+/* DISCOUNT */
+
+.badge-discount{
+
+    background:var(--warning-bg);
+
+    color:var(--brand-dark);
+
+}
+
+/* OUT OF STOCK */
+
+.badge-out-stock{
+
+    background:#F5ECE8;
+
+    color:#9B7654;
+
+}
+
+/* IN STOCK */
+
+.badge-in-stock{
+
+    background:var(--success-bg);
+
+    color:var(--success);
+
+}
+
+/* COMPACT */
+
+.badge-sm{
+
+    min-height:22px;
+
+    padding:0 .55rem;
+
+    font-size:.68rem;
+
+}
+
+/* LARGE */
+
+.badge-lg{
+
+    min-height:34px;
+
+    padding:0 1rem;
+
+    font-size:var(--font-sm);
+
+}
+
+/* ICON */
+
+.badge-icon{
+
+    font-size:.85em;
+
+}
+
+/* ONE BADGE RULE */
+
+.product-card .badge:not(:first-child),
+.product-popup .badge:not(:first-child){
+
+    display:none;
+
+}
+
+/* FADE */
+
+.badge{
+
+    transition:all var(--normal) var(--ease);
+
+}

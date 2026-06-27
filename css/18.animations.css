@@ -1,0 +1,136 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 18.animations.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 18
+    ANIMATIONS
+==============================================================================*/
+
+.animate-fade-in{
+    animation:myraFadeIn .35s var(--ease) both;
+}
+
+.animate-slide-up{
+    animation:myraSlideUp .35s var(--ease) both;
+}
+
+.animate-slide-down{
+    animation:myraSlideDown .35s var(--ease) both;
+}
+
+.animate-scale-in{
+    animation:myraScaleIn .25s var(--ease) both;
+}
+
+.animate-image-fade{
+    animation:myraImageFade .4s var(--ease) both;
+}
+
+.animate-soft-pulse{
+    animation:myraSoftPulse 1.8s ease-in-out infinite;
+}
+
+.pressable{
+    transition:transform var(--fast) var(--ease);
+}
+
+.pressable:active{
+    transform:scale(.97);
+}
+
+.shimmer{
+    position:relative;
+    overflow:hidden;
+}
+
+.shimmer::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.55),
+        transparent
+    );
+    transform:translateX(-100%);
+    animation:myraShimmer 1.4s linear infinite;
+}
+
+@keyframes myraFadeIn{
+    from{ opacity:0; }
+    to{ opacity:1; }
+}
+
+@keyframes myraSlideUp{
+    from{
+        opacity:0;
+        transform:translateY(18px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes myraSlideDown{
+    from{
+        opacity:0;
+        transform:translateY(-18px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes myraScaleIn{
+    from{
+        opacity:0;
+        transform:scale(.96);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes myraImageFade{
+    from{
+        opacity:0;
+        filter:blur(4px);
+    }
+    to{
+        opacity:1;
+        filter:blur(0);
+    }
+}
+
+@keyframes myraSoftPulse{
+    0%,100%{
+        opacity:1;
+    }
+    50%{
+        opacity:.72;
+    }
+}
+
+@keyframes myraShimmer{
+    to{
+        transform:translateX(100%);
+    }
+}
+
+@media (prefers-reduced-motion:reduce){
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
+    }
+}

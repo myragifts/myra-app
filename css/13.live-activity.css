@@ -1,0 +1,127 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 13.live-activity.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 13
+    LIVE ACTIVITY
+==============================================================================*/
+
+/* LIVE BOX */
+
+.live-activity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    padding:.8rem 1rem;
+
+    background:var(--success-bg);
+
+    border:1px solid rgba(143,175,141,.25);
+
+    border-radius:var(--radius-lg);
+
+    color:var(--success);
+
+    font-size:var(--font-sm);
+
+    font-weight:var(--weight-medium);
+
+}
+
+/* ICON */
+
+.live-activity-icon{
+
+    font-size:1rem;
+
+}
+
+/* COUNT */
+
+.live-activity-count{
+
+    font-weight:var(--weight-bold);
+
+}
+
+/* LABEL */
+
+.live-activity-label{
+
+    color:inherit;
+
+}
+
+/* TRENDING */
+
+.live-trending{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-left:auto;
+
+    padding:.2rem .65rem;
+
+    border-radius:999px;
+
+    background:var(--warning-bg);
+
+    color:var(--brand-dark);
+
+    font-size:.7rem;
+
+    font-weight:var(--weight-semibold);
+
+}
+
+/* REQUEST COUNT */
+
+.live-request{
+
+    background:var(--warning-bg);
+
+    border:1px solid rgba(216,195,162,.35);
+
+    color:#9B7654;
+
+}
+
+/* FADE UPDATE */
+
+.live-update{
+
+    animation:liveFade .35s ease;
+
+}
+
+@keyframes liveFade{
+
+    from{
+
+        opacity:.3;
+
+        transform:translateY(4px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

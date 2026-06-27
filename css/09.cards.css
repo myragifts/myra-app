@@ -1,0 +1,235 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 09.cards.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 9
+    CARDS
+==============================================================================*/
+
+/* CARD */
+
+.card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-xl);
+
+    box-shadow:var(--shadow-sm);
+
+    overflow:hidden;
+
+    transition:all var(--normal) var(--ease);
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* CARD HEADER */
+
+.card-header{
+
+    padding:1rem 1.25rem;
+
+    border-bottom:1px solid var(--border);
+
+    background:var(--surface);
+
+}
+
+/* CARD BODY */
+
+.card-body{
+
+    padding:1.25rem;
+
+}
+
+/* CARD FOOTER */
+
+.card-footer{
+
+    padding:1rem 1.25rem;
+
+    border-top:1px solid var(--border);
+
+    background:var(--surface-soft);
+
+}
+
+/* CARD TITLE */
+
+.card-title{
+
+    font-size:var(--font-lg);
+
+    font-weight:var(--weight-semibold);
+
+    color:var(--text);
+
+    margin-bottom:.4rem;
+
+}
+
+/* CARD SUBTITLE */
+
+.card-subtitle{
+
+    font-size:var(--font-sm);
+
+    color:var(--text-muted);
+
+}
+
+/* CARD TEXT */
+
+.card-text{
+
+    font-size:var(--font-sm);
+
+    color:var(--text-soft);
+
+    line-height:var(--line-relaxed);
+
+}
+
+/* IMAGE */
+
+.card-image{
+
+    width:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+}
+
+/* HORIZONTAL CARD */
+
+.card-horizontal{
+
+    display:flex;
+
+    align-items:stretch;
+
+}
+
+.card-horizontal .card-image{
+
+    width:180px;
+
+    flex-shrink:0;
+
+}
+
+/* COMPACT */
+
+.card-compact .card-body{
+
+    padding:1rem;
+
+}
+
+/* LARGE */
+
+.card-large .card-body{
+
+    padding:2rem;
+
+}
+
+/* SOFT */
+
+.card-soft{
+
+    background:var(--surface-soft);
+
+}
+
+/* OUTLINE */
+
+.card-outline{
+
+    box-shadow:none;
+
+}
+
+/* CLICKABLE */
+
+.card-clickable{
+
+    cursor:pointer;
+
+}
+
+/* DISABLED */
+
+.card-disabled{
+
+    opacity:.6;
+
+    pointer-events:none;
+
+}
+
+/* LOADING */
+
+.card-loading{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card-loading::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    animation:card-loading 1.4s linear infinite;
+
+}
+
+@keyframes card-loading{
+
+    from{
+
+        transform:translateX(-100%);
+
+    }
+
+    to{
+
+        transform:translateX(100%);
+
+    }
+
+}

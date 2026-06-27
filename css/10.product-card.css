@@ -494,3 +494,237 @@
     margin-block:var(--space-xs);
 
 }
+/*==============================================================================
+    PART 3
+    Live Activity + Stock + Availability
+==============================================================================*/
+
+/* LIVE ACTIVITY */
+
+.product-card-live{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.4rem;
+
+    margin-top:var(--space-sm);
+
+    font-size:var(--font-xs);
+
+    color:var(--success);
+
+    font-weight:var(--weight-medium);
+
+}
+
+/* LIVE ICON */
+
+.product-card-live-icon{
+
+    font-size:.85rem;
+
+}
+
+/* LIVE COUNT */
+
+.product-card-live-count{
+
+    color:var(--success);
+
+}
+
+/* TRENDING */
+
+.product-card-trending{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:.25rem .6rem;
+
+    margin-top:var(--space-xs);
+
+    border-radius:var(--radius-pill);
+
+    background:var(--warning-bg);
+
+    color:var(--brand-dark);
+
+    font-size:var(--font-xs);
+
+    font-weight:var(--weight-semibold);
+
+}
+
+/* STOCK */
+
+.product-card-stock{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.45rem;
+
+    margin-top:var(--space-sm);
+
+}
+
+/* STOCK DOT */
+
+.product-card-stock-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+}
+
+/* IN STOCK */
+
+.product-card-stock.in-stock .product-card-stock-dot{
+
+    background:var(--success);
+
+}
+
+.product-card-stock.in-stock .product-card-stock-text{
+
+    color:var(--success);
+
+}
+
+/* LOW STOCK */
+
+.product-card-stock.low-stock .product-card-stock-dot{
+
+    background:var(--warning);
+
+}
+
+.product-card-stock.low-stock .product-card-stock-text{
+
+    color:#A67C52;
+
+}
+
+/* OUT OF STOCK */
+
+.product-card-stock.out-of-stock .product-card-stock-dot{
+
+    background:#B88A7A;
+
+}
+
+.product-card-stock.out-of-stock .product-card-stock-text{
+
+    color:#9B7654;
+
+}
+
+/* STOCK TEXT */
+
+.product-card-stock-text{
+
+    font-size:var(--font-xs);
+
+    font-weight:var(--weight-medium);
+
+}
+
+/* AVAILABILITY REQUEST */
+
+.product-card-request{
+
+    margin-top:var(--space-sm);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.45rem;
+
+    font-size:var(--font-xs);
+
+    color:var(--text-soft);
+
+}
+
+/* REQUEST COUNTER */
+
+.product-card-request-count{
+
+    color:var(--brand-dark);
+
+    font-weight:var(--weight-semibold);
+
+}
+
+/* REQUESTED STATE */
+
+.product-card-requested{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    height:42px;
+
+    margin-top:var(--space-md);
+
+    border-radius:var(--radius-pill);
+
+    background:var(--success-bg);
+
+    color:var(--success);
+
+    font-size:var(--font-sm);
+
+    font-weight:var(--weight-semibold);
+
+}
+
+/* JUST SOLD */
+
+.product-card-just-sold{
+
+    margin-top:var(--space-sm);
+
+    padding:.55rem .8rem;
+
+    border-radius:var(--radius-md);
+
+    background:var(--warning-bg);
+
+    color:#9B7654;
+
+    font-size:var(--font-xs);
+
+    font-weight:var(--weight-medium);
+
+}
+
+/* OUT OF STOCK CARD */
+
+.product-card.out-of-stock{
+
+    opacity:.96;
+
+}
+
+.product-card.out-of-stock .product-card-image{
+
+    filter:saturate(.75);
+
+}

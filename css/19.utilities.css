@@ -1,0 +1,178 @@
+/*==============================================================================
+    MYRA
+    A Shopping Love Story
+
+    File    : 19.utilities.css
+    Version : 1.0
+    Status  : Production
+
+    SECTION 19
+    UTILITIES
+==============================================================================*/
+
+/* DISPLAY */
+.d-block{display:block;}
+.d-inline{display:inline;}
+.d-inline-block{display:inline-block;}
+.d-flex{display:flex;}
+.d-inline-flex{display:inline-flex;}
+.d-grid{display:grid;}
+.d-none{display:none !important;}
+
+/* FLEX */
+.flex-column{flex-direction:column;}
+.flex-row{flex-direction:row;}
+.flex-wrap{flex-wrap:wrap;}
+.flex-1{flex:1;}
+
+.items-start{align-items:flex-start;}
+.items-center{align-items:center;}
+.items-end{align-items:flex-end;}
+
+.justify-start{justify-content:flex-start;}
+.justify-center{justify-content:center;}
+.justify-between{justify-content:space-between;}
+.justify-end{justify-content:flex-end;}
+
+/* GAP */
+.gap-xs{gap:var(--space-xs);}
+.gap-sm{gap:var(--space-sm);}
+.gap-md{gap:var(--space-md);}
+.gap-lg{gap:var(--space-lg);}
+.gap-xl{gap:var(--space-xl);}
+
+/* MARGIN */
+.mt-sm{margin-top:var(--space-sm);}
+.mt-md{margin-top:var(--space-md);}
+.mt-lg{margin-top:var(--space-lg);}
+.mt-xl{margin-top:var(--space-xl);}
+
+.mb-sm{margin-bottom:var(--space-sm);}
+.mb-md{margin-bottom:var(--space-md);}
+.mb-lg{margin-bottom:var(--space-lg);}
+.mb-xl{margin-bottom:var(--space-xl);}
+
+.mx-auto{margin-inline:auto;}
+
+/* PADDING */
+.p-sm{padding:var(--space-sm);}
+.p-md{padding:var(--space-md);}
+.p-lg{padding:var(--space-lg);}
+.p-xl{padding:var(--space-xl);}
+
+.px-md{padding-inline:var(--space-md);}
+.px-lg{padding-inline:var(--space-lg);}
+
+.py-md{padding-block:var(--space-md);}
+.py-lg{padding-block:var(--space-lg);}
+
+/* WIDTH */
+.w-full{width:100%;}
+.w-auto{width:auto;}
+.max-container{max-width:var(--container);}
+
+/* TEXT */
+.text-left{text-align:left;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+
+.text-brand{color:var(--brand);}
+.text-brand-dark{color:var(--brand-dark);}
+.text-muted{color:var(--text-muted);}
+.text-soft{color:var(--text-soft);}
+.text-success{color:var(--success);}
+.text-warning{color:#A67C52;}
+.text-danger{color:#9B5555;}
+
+.fw-normal{font-weight:var(--weight-normal);}
+.fw-medium{font-weight:var(--weight-medium);}
+.fw-semibold{font-weight:var(--weight-semibold);}
+.fw-bold{font-weight:var(--weight-bold);}
+
+/* BACKGROUND */
+.bg-surface{background:var(--surface);}
+.bg-soft{background:var(--surface-soft);}
+.bg-alt{background:var(--surface-alt);}
+.bg-brand{background:var(--brand);}
+.bg-success{background:var(--success-bg);}
+.bg-warning{background:var(--warning-bg);}
+
+/* RADIUS */
+.rounded-sm{border-radius:var(--radius-sm);}
+.rounded-md{border-radius:var(--radius-md);}
+.rounded-lg{border-radius:var(--radius-lg);}
+.rounded-xl{border-radius:var(--radius-xl);}
+.rounded-pill{border-radius:var(--radius-pill);}
+
+/* SHADOW */
+.shadow-sm{box-shadow:var(--shadow-sm);}
+.shadow-md{box-shadow:var(--shadow-md);}
+.shadow-lg{box-shadow:var(--shadow-lg);}
+.shadow-none{box-shadow:none;}
+
+/* POSITION */
+.relative{position:relative;}
+.absolute{position:absolute;}
+.fixed{position:fixed;}
+.sticky{position:sticky;}
+
+/* OVERFLOW */
+.overflow-hidden{overflow:hidden;}
+.overflow-auto{overflow:auto;}
+.overflow-x-auto{overflow-x:auto;}
+.overflow-y-auto{overflow-y:auto;}
+
+/* CURSOR */
+.pointer{cursor:pointer;}
+.not-allowed{cursor:not-allowed;}
+
+/* VISIBILITY */
+.visible{visibility:visible;}
+.invisible{visibility:hidden;}
+
+/* USER SELECT */
+.select-none,
+.user-select-none{
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+/* POINTER EVENTS */
+.pointer-events-none{pointer-events:none;}
+.pointer-events-auto{pointer-events:auto;}
+
+/* SCROLL */
+.no-scroll{
+    overflow:hidden !important;
+}
+
+/* IMAGE */
+.img-cover{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.img-contain{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+/* BORDER */
+.border{border:1px solid var(--border);}
+.border-light{border:1px solid var(--border-light);}
+.border-none{border:none;}
+
+/* LINE CLAMP */
+.line-clamp-1,
+.line-clamp-2,
+.line-clamp-3{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
+.line-clamp-1{-webkit-line-clamp:1;}
+.line-clamp-2{-webkit-line-clamp:2;}
+.line-clamp-3{-webkit-line-clamp:3;}

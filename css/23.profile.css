@@ -204,3 +204,259 @@
     color:var(--text);
     line-height:1.35;
 }
+/*==============================================================================
+    PART 2
+    Personal Information + Reward Wallet
+==============================================================================*/
+
+/* PERSONAL INFORMATION */
+
+.profile-info-list{
+    display:flex;
+    flex-direction:column;
+    border:1px solid var(--border);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    background:var(--surface);
+}
+
+.profile-info-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    padding:1rem 1.1rem;
+    border-bottom:1px solid var(--border-light);
+}
+
+.profile-info-row:last-child{
+    border-bottom:none;
+}
+
+.profile-info-label{
+    color:var(--text);
+    font-size:var(--font-sm);
+    font-weight:var(--weight-medium);
+}
+
+.profile-info-value{
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+    color:var(--text);
+    font-size:var(--font-sm);
+    font-weight:var(--weight-medium);
+}
+
+.profile-info-lock{
+    color:var(--text-muted);
+    font-size:1rem;
+}
+
+.profile-info-copy{
+    color:var(--brand-dark);
+    cursor:pointer;
+}
+
+.profile-info-note{
+    margin-top:1rem;
+    padding:.9rem 1rem;
+    background:#FFF8F0;
+    border:1px solid #F3E2C3;
+    border-radius:var(--radius-lg);
+    color:#8A6A2F;
+    font-size:var(--font-sm);
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+}
+
+/*==============================================================================
+    REWARD WALLET
+==============================================================================*/
+
+.reward-wallet-card{
+    position:relative;
+}
+
+.reward-wallet-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:1rem;
+}
+
+.reward-wallet-title{
+    font-size:var(--font-lg);
+    font-weight:var(--weight-bold);
+    color:var(--text);
+}
+
+.reward-how-btn{
+    height:38px;
+    padding:0 1rem;
+    border:1px solid var(--brand);
+    border-radius:var(--radius-pill);
+    background:#fff;
+    color:var(--brand-dark);
+    font-size:var(--font-xs);
+    font-weight:var(--weight-semibold);
+    display:flex;
+    align-items:center;
+    gap:.45rem;
+    transition:all var(--normal) var(--ease);
+}
+
+.reward-how-btn:hover{
+    background:var(--surface-soft);
+}
+
+.reward-balance{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    padding:1rem;
+    border:1px solid var(--border);
+    border-radius:var(--radius-lg);
+    background:var(--surface);
+}
+
+.reward-icon{
+    width:74px;
+    height:74px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--surface-soft);
+    color:var(--brand-dark);
+    font-size:2rem;
+    flex-shrink:0;
+}
+
+.reward-details{
+    flex:1;
+}
+
+.reward-label{
+    color:var(--text-soft);
+    font-size:var(--font-sm);
+}
+
+.reward-balance-value{
+    margin:.25rem 0;
+    color:var(--text);
+    font-size:2.2rem;
+    font-weight:var(--weight-bold);
+    line-height:1;
+}
+
+.reward-earned{
+    color:var(--text-muted);
+    font-size:var(--font-sm);
+}
+
+.reward-arrow{
+    font-size:1.8rem;
+    color:var(--text);
+}
+
+/* Referral Information */
+
+.reward-referral-box{
+    margin-top:1rem;
+    border:1px solid var(--border);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    background:#fff;
+}
+
+.reward-referral-top{
+    padding:1rem;
+}
+
+.reward-referral-title{
+    color:var(--text);
+    font-size:var(--font-sm);
+    font-weight:var(--weight-semibold);
+    margin-bottom:.55rem;
+}
+
+.reward-referral-row{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.reward-referral-link{
+    flex:1;
+    color:var(--brand-dark);
+    font-size:var(--font-sm);
+    word-break:break-all;
+}
+
+.reward-copy-btn{
+    min-width:90px;
+    height:40px;
+    border:1px solid var(--brand);
+    background:#fff;
+    color:var(--brand-dark);
+    border-radius:var(--radius-md);
+    font-size:var(--font-sm);
+    font-weight:var(--weight-semibold);
+}
+
+.reward-copy-btn:hover{
+    background:var(--surface-soft);
+}
+
+.reward-share-strip{
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+    margin:1rem;
+    padding:1rem;
+    background:#F2FAF4;
+    border:1px solid #D8EFDE;
+    border-radius:var(--radius-lg);
+}
+
+.reward-share-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.25rem;
+    flex-shrink:0;
+}
+
+.reward-share-text{
+    color:#2B2B2B;
+    font-size:var(--font-sm);
+    line-height:1.5;
+}
+
+/* Referral Benefit */
+
+.reward-benefit{
+    margin-top:1rem;
+    padding:1rem;
+    border-radius:var(--radius-lg);
+    background:#FFF9F2;
+    border:1px solid #F2E3C6;
+}
+
+.reward-benefit p{
+    margin:0;
+    color:var(--text);
+    line-height:1.7;
+}
+
+.reward-benefit strong{
+    color:var(--brand-dark);
+    font-weight:var(--weight-bold);
+}
